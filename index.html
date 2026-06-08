@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Sabiya's Mehndi Art – Premium Bridal, Arabic & Festival Mehndi Artist in Vita City. Book Now for Wedding, Engagement & Festival Mehndi Designs."/>
+<title>Sabiya's Mehndi Art – Premium Bridal Mehndi Artist | Vita City</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --green-deep: #1a3a2a;
+  --green-mid: #2d5a3d;
+  --green-light: #4a8c5c;
+  --green-pale: #e8f5ec;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-pale: #fdf6e3;
+  --cream: #faf8f3;
+  --text-dark: #1c1c1c;
+  --text-mid: #4a4a4a;
+  --text-light: #7a7a7a;
+  --white: #ffffff;
+  --shadow: 0 8px 40px rgba(26,58,42,0.12);
+  --shadow-gold: 0 4px 24px rgba(201,168,76,0.25);
+  --radius: 16px;
+  --radius-sm: 8px;
+  --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Jost', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-sans);background:var(--cream);color:var(--text-dark);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+input,textarea,select{font-family:inherit}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--green-pale)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+
+/* NAVBAR */
+#navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(26,58,42,0.97);backdrop-filter:blur(10px);
+  padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  height:68px;
+  border-bottom:1px solid rgba(201,168,76,0.3);
+  transition:var(--transition);
+}
+#navbar.scrolled{background:rgba(26,58,42,0.99);box-shadow:0 4px 20px rgba(0,0,0,0.3);}
+.nav-logo{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;display:flex;align-items:center;gap:10px;}
+.nav-logo span{color:var(--white);font-weight:300}
+.nav-links{display:flex;gap:8px;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.82);font-size:0.82rem;font-weight:500;letter-spacing:0.8px;text-transform:uppercase;padding:8px 12px;border-radius:6px;transition:var(--transition);}
+.nav-links a:hover,.nav-links a.active{color:var(--gold-light);background:rgba(201,168,76,0.12);}
+.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green-deep)!important;padding:8px 18px!important;border-radius:20px!important;font-weight:600!important;}
+.nav-cta:hover{transform:scale(1.04);box-shadow:var(--shadow-gold)}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer}
+.hamburger span{display:block;width:24px;height:2px;background:var(--gold-light);transition:var(--transition);border-radius:2px}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--green-deep);z-index:999;padding:20px 5%;flex-direction:column;gap:4px;border-bottom:2px solid var(--gold);}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:rgba(255,255,255,0.85);padding:12px 16px;border-radius:8px;font-size:0.9rem;transition:var(--transition);}
+.mobile-menu a:hover{background:rgba(201,168,76,0.15);color:var(--gold-light)}
+
+/* HERO */
+#hero{min-height:100vh;background:linear-gradient(160deg, var(--green-deep) 0%, #0f2218 40%, #1a3a2a 70%, #2d3a1a 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:68px;}
+.hero-pattern{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23c9a84c' stroke-width='0.5' opacity='0.12'%3E%3Ccircle cx='40' cy='40' r='32'/%3E%3Ccircle cx='40' cy='40' r='22'/%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3Cline x1='40' y1='8' x2='40' y2='72'/%3E%3Cline x1='8' y1='40' x2='72' y2='40'/%3E%3Cline x1='17.4' y1='17.4' x2='62.6' y2='62.6'/%3E%3Cline x1='62.6' y1='17.4' x2='17.4' y2='62.6'/%3E%3C/g%3E%3C/svg%3E");opacity:0.6;}
+.hero-glow{position:absolute;top:-100px;right:-100px;width:600px;height:600px;background:radial-gradient(circle, rgba(201,168,76,0.18) 0%, transparent 70%);pointer-events:none;}
+.hero-glow2{position:absolute;bottom:-150px;left:-100px;width:500px;height:500px;background:radial-gradient(circle, rgba(74,140,92,0.2) 0%, transparent 70%);pointer-events:none;}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 5%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);color:var(--gold-light);padding:6px 16px;border-radius:20px;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;animation:fadeInUp 0.8s ease both;}
+.hero-title{font-family:var(--font-serif);font-size:clamp(2.8rem,5vw,4.5rem);font-weight:700;line-height:1.1;color:var(--white);margin-bottom:16px;animation:fadeInUp 0.8s 0.1s ease both;}
+.hero-title .gold{color:var(--gold-light);font-style:italic}
+.hero-subtitle{font-size:1.1rem;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:36px;font-weight:300;animation:fadeInUp 0.8s 0.2s ease both;}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;animation:fadeInUp 0.8s 0.3s ease both;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green-deep);padding:14px 28px;border-radius:30px;font-weight:600;font-size:0.95rem;letter-spacing:0.5px;transition:var(--transition);box-shadow:var(--shadow-gold);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,168,76,0.4)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(255,255,255,0.4);color:rgba(255,255,255,0.9);padding:14px 28px;border-radius:30px;font-size:0.95rem;transition:var(--transition);}
+.btn-outline:hover{border-color:var(--gold-light);color:var(--gold-light);background:rgba(201,168,76,0.1)}
+.hero-stats{display:flex;gap:32px;margin-top:44px;animation:fadeInUp 0.8s 0.4s ease both;}
+.hero-stat .num{font-family:var(--font-serif);font-size:2.2rem;color:var(--gold-light);font-weight:700;display:block;}
+.hero-stat .label{font-size:0.78rem;color:rgba(255,255,255,0.55);letter-spacing:1px;text-transform:uppercase}
+.hero-visual{position:relative;animation:fadeInRight 1s 0.2s ease both;}
+.hero-img-wrap{position:relative;border-radius:30px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,0.4);aspect-ratio:4/5;}
+.hero-img-wrap img{width:100%;height:100%;object-fit:cover}
+.hero-img-badge{position:absolute;bottom:24px;left:-20px;background:var(--white);border-radius:12px;padding:14px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;}
+.hero-img-badge .icon{font-size:1.4rem}
+.hero-img-badge .text{font-size:0.8rem;color:var(--text-mid);font-weight:500}
+.hero-img-badge .text strong{display:block;color:var(--green-deep);font-size:0.9rem}
+.hero-floating-card{position:absolute;top:30px;right:-20px;background:linear-gradient(135deg,var(--green-deep),var(--green-mid));border:1px solid rgba(201,168,76,0.4);border-radius:12px;padding:14px 18px;box-shadow:var(--shadow);color:var(--white);}
+.hero-floating-card .stars{color:var(--gold);font-size:0.85rem;letter-spacing:2px}
+.hero-floating-card .fc-text{font-size:0.78rem;opacity:0.8;margin-top:4px}
+
+/* SECTIONS */
+section{padding:80px 5%}
+.section-center{max-width:1200px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:56px}
+.section-badge{display:inline-flex;align-items:center;gap:6px;background:var(--green-pale);color:var(--green-mid);padding:5px 14px;border-radius:20px;font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:14px;border:1px solid rgba(74,140,92,0.3);}
+.section-title{font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);color:var(--text-dark);font-weight:700;line-height:1.2;margin-bottom:14px;}
+.section-title .gold{color:var(--gold)}
+.section-desc{font-size:1rem;color:var(--text-mid);max-width:560px;margin:0 auto;line-height:1.7;font-weight:300;}
+.divider{display:flex;align-items:center;justify-content:center;gap:12px;margin:16px auto;}
+.divider::before,.divider::after{content:'';flex:1;max-width:80px;height:1px;background:var(--gold);opacity:0.5}
+.divider span{color:var(--gold);font-size:1rem}
+
+/* ABOUT */
+#about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center;}
+.about-img-stack{position:relative;padding:20px}
+.about-img-main{border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15);aspect-ratio:3/4;}
+.about-img-main img{width:100%;height:100%;object-fit:cover}
+.about-img-accent{position:absolute;bottom:-20px;right:-20px;width:48%;border-radius:16px;overflow:hidden;border:4px solid var(--white);box-shadow:var(--shadow);aspect-ratio:1;}
+.about-img-accent img{width:100%;height:100%;object-fit:cover}
+.about-experience-badge{position:absolute;top:0;left:0;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green-deep);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow-gold);text-align:center;}
+.about-experience-badge .yrs{font-family:var(--font-serif);font-size:2.4rem;font-weight:700;line-height:1}
+.about-experience-badge .yrs-text{font-size:0.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.about-content .section-header{text-align:left;margin-bottom:28px}
+.about-content .divider{justify-content:flex-start}
+.about-content .divider::before{display:none}
+.about-content .divider::after{max-width:60px}
+.about-desc{font-size:0.97rem;color:var(--text-mid);line-height:1.8;margin-bottom:16px;font-weight:300}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0;}
+.about-feat{display:flex;align-items:flex-start;gap:10px;padding:14px;border-radius:10px;background:var(--cream);}
+.about-feat .feat-icon{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--green-mid),var(--green-light));display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.about-feat .feat-text strong{display:block;font-size:0.85rem;color:var(--text-dark);font-weight:600}
+.about-feat .feat-text span{font-size:0.78rem;color:var(--text-light)}
+.service-areas{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;}
+.area-tag{background:var(--green-pale);color:var(--green-mid);padding:6px 14px;border-radius:20px;font-size:0.8rem;border:1px solid rgba(74,140,92,0.2);font-weight:500;}
+
+/* GALLERY */
+#gallery{background:var(--cream)}
+.gallery-filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:40px;}
+.filter-btn{padding:8px 22px;border-radius:22px;font-size:0.82rem;font-weight:600;letter-spacing:0.8px;border:1.5px solid rgba(74,140,92,0.3);color:var(--green-mid);background:var(--white);transition:var(--transition);}
+.filter-btn:hover,.filter-btn.active{background:linear-gradient(135deg,var(--green-mid),var(--green-light));color:var(--white);border-color:transparent;box-shadow:0 4px 16px rgba(45,90,61,0.3);}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;}
+.gallery-item{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.1);transition:var(--transition);}
+.gallery-item:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,0.2)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:0.5s ease}
+.gallery-item:hover img{transform:scale(1.06)}
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,58,42,0.85) 0%,transparent 50%);opacity:0;transition:var(--transition);display:flex;align-items:flex-end;padding:20px;}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-label{color:var(--white)}
+.gallery-label .cat{font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold-light);font-weight:600;}
+.gallery-label .title{font-family:var(--font-serif);font-size:1rem;font-weight:600}
+.gallery-cat-badge{position:absolute;top:12px;left:12px;background:rgba(26,58,42,0.85);color:var(--gold-light);padding:4px 10px;border-radius:12px;font-size:0.7rem;letter-spacing:1px;font-weight:600;text-transform:uppercase;}
+
+/* PACKAGES */
+#packages{background:var(--green-deep);position:relative;overflow:hidden}
+#packages::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23c9a84c' stroke-width='0.4' opacity='0.08'%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Cline x1='40' y1='10' x2='40' y2='70'/%3E%3Cline x1='10' y1='40' x2='70' y2='40'/%3E%3C/g%3E%3C/svg%3E");}
+#packages .section-title{color:var(--white)}
+#packages .section-badge{background:rgba(201,168,76,0.15);color:var(--gold-light);border-color:rgba(201,168,76,0.3)}
+#packages .section-desc{color:rgba(255,255,255,0.6)}
+#packages .divider::before,#packages .divider::after{opacity:0.4}
+.packages-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;position:relative;z-index:1;}
+.pkg-card{background:rgba(255,255,255,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:20px;padding:28px 24px;transition:var(--transition);position:relative;overflow:hidden;}
+.pkg-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,168,76,0.08),transparent);opacity:0;transition:var(--transition);}
+.pkg-card:hover{transform:translateY(-8px);border-color:rgba(201,168,76,0.5);background:rgba(255,255,255,0.1);box-shadow:0 20px 50px rgba(0,0,0,0.3),0 0 0 1px rgba(201,168,76,0.3);}
+.pkg-card:hover::before{opacity:1}
+.pkg-card.featured{border-color:var(--gold);background:rgba(201,168,76,0.1);}
+.pkg-featured-badge{position:absolute;top:0;right:0;background:var(--gold);color:var(--green-deep);padding:4px 14px;border-radius:0 18px 0 12px;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+.pkg-icon{width:52px;height:52px;border-radius:14px;margin-bottom:16px;background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(201,168,76,0.1));display:flex;align-items:center;justify-content:center;font-size:1.6rem;border:1px solid rgba(201,168,76,0.25);}
+.pkg-name{font-family:var(--font-serif);font-size:1.35rem;color:var(--white);font-weight:700;margin-bottom:6px;}
+.pkg-price{font-family:var(--font-serif);font-size:1.9rem;font-weight:700;color:var(--gold-light);margin-bottom:4px;}
+.pkg-price span{font-size:1rem;font-weight:400;color:rgba(255,255,255,0.5)}
+.pkg-price-note{font-size:0.75rem;color:rgba(201,168,76,0.7);margin-bottom:4px;font-style:italic;}
+.pkg-duration{font-size:0.78rem;color:rgba(255,255,255,0.5);margin-bottom:16px;display:flex;align-items:center;gap:5px;}
+.pkg-divider{height:1px;background:rgba(201,168,76,0.2);margin:16px 0}
+.pkg-features{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+.pkg-features li{font-size:0.83rem;color:rgba(255,255,255,0.75);display:flex;align-items:center;gap:8px;}
+.pkg-features li::before{content:'✦';color:var(--gold);font-size:0.65rem;flex-shrink:0;}
+.pkg-book-btn{width:100%;padding:12px;border-radius:12px;font-size:0.88rem;font-weight:600;letter-spacing:0.5px;transition:var(--transition);border:1.5px solid rgba(201,168,76,0.5);color:var(--gold-light);}
+.pkg-book-btn:hover{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green-deep);border-color:transparent;box-shadow:var(--shadow-gold);}
+.pkg-card.featured .pkg-book-btn{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green-deep);border-color:transparent;}
+
+/* BOOKING */
+#booking{background:var(--white)}
+.booking-wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:start;}
+.booking-info h2{font-family:var(--font-serif);font-size:2rem;color:var(--text-dark);margin-bottom:12px;}
+.booking-info p{font-size:0.95rem;color:var(--text-mid);line-height:1.7;margin-bottom:28px}
+.booking-contact-items{display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+.bci{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:12px;background:var(--cream);border:1px solid var(--green-pale);}
+.bci-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--green-mid),var(--green-light));display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.bci-text strong{display:block;font-size:0.85rem;color:var(--text-dark)}
+.bci-text span{font-size:0.8rem;color:var(--text-light)}
+.booking-form-card{background:var(--cream);border-radius:24px;padding:36px;box-shadow:var(--shadow);border:1px solid rgba(74,140,92,0.1);}
+.booking-form-card h3{font-family:var(--font-serif);font-size:1.5rem;color:var(--text-dark);margin-bottom:24px;text-align:center;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:0.8rem;font-weight:600;color:var(--green-deep);letter-spacing:0.5px;text-transform:uppercase;}
+.form-group input,.form-group select,.form-group textarea{padding:12px 14px;border-radius:10px;border:1.5px solid rgba(74,140,92,0.2);background:var(--white);color:var(--text-dark);font-size:0.9rem;transition:var(--transition);outline:none;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--green-mid);box-shadow:0 0 0 3px rgba(45,90,61,0.08);}
+.form-group textarea{resize:vertical;min-height:90px}
+.submit-btn{width:100%;padding:15px;border-radius:14px;background:linear-gradient(135deg,var(--green-deep),var(--green-mid));color:var(--white);font-size:0.95rem;font-weight:600;letter-spacing:0.5px;margin-top:8px;transition:var(--transition);box-shadow:0 4px 20px rgba(26,58,42,0.3);}
+.submit-btn:hover{background:linear-gradient(135deg,var(--green-mid),var(--green-light));transform:translateY(-2px);box-shadow:0 8px 30px rgba(26,58,42,0.4);}
+.form-success{display:none;text-align:center;padding:30px;}
+.form-success .check{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--green-mid),var(--green-light));display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 16px;}
+.form-success h4{font-family:var(--font-serif);font-size:1.4rem;color:var(--text-dark)}
+.form-success p{color:var(--text-mid);font-size:0.9rem;margin-top:8px}
+.form-success .bid{display:inline-block;margin-top:12px;background:var(--green-pale);color:var(--green-mid);padding:8px 18px;border-radius:20px;font-weight:600;font-size:0.9rem;}
+
+/* TESTIMONIALS */
+#testimonials{background:var(--green-pale)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;}
+.testi-card{background:var(--white);border-radius:20px;padding:28px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid rgba(74,140,92,0.1);transition:var(--transition);position:relative;}
+.testi-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.testi-quote{font-size:2.5rem;line-height:1;color:var(--gold);font-family:Georgia;margin-bottom:8px;opacity:0.6;}
+.testi-text{font-size:0.92rem;color:var(--text-mid);line-height:1.7;margin-bottom:20px;font-style:italic;}
+.testi-footer{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:42px;height:42px;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,var(--green-mid),var(--green-light));display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.1rem;color:var(--white);font-weight:700;flex-shrink:0;}
+.testi-name{font-weight:600;font-size:0.88rem;color:var(--text-dark)}
+.testi-stars{color:var(--gold);font-size:0.75rem;letter-spacing:1px}
+
+/* WHY */
+#why{background:var(--cream)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px;}
+.why-card{text-align:center;padding:32px 24px;border-radius:20px;background:var(--white);border:1px solid rgba(74,140,92,0.1);transition:var(--transition);}
+.why-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(201,168,76,0.3)}
+.why-icon{width:64px;height:64px;border-radius:16px;margin:0 auto 16px;background:linear-gradient(135deg,var(--green-pale),var(--green-pale));display:flex;align-items:center;justify-content:center;font-size:1.8rem;border:2px solid rgba(74,140,92,0.2);transition:var(--transition);}
+.why-card:hover .why-icon{background:linear-gradient(135deg,var(--green-mid),var(--green-light));border-color:transparent;}
+.why-title{font-family:var(--font-serif);font-size:1.15rem;color:var(--text-dark);margin-bottom:8px;font-weight:600}
+.why-desc{font-size:0.85rem;color:var(--text-light);line-height:1.6}
+
+/* CONTACT */
+#contact{background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.contact-info h3{font-family:var(--font-serif);font-size:1.6rem;color:var(--text-dark);margin-bottom:16px;}
+.contact-info p{font-size:0.9rem;color:var(--text-mid);line-height:1.7;margin-bottom:28px}
+.contact-items{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+.contact-item{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--cream);border-radius:12px;}
+.ci-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--green-mid),var(--green-light));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.ci-text strong{display:block;font-size:0.83rem;color:var(--text-dark)}
+.ci-text span{font-size:0.8rem;color:var(--text-light)}
+.wa-btn{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:var(--white);padding:12px 24px;border-radius:28px;font-weight:600;font-size:0.9rem;transition:var(--transition);box-shadow:0 4px 16px rgba(37,211,102,0.3);}
+.wa-btn:hover{background:#20c15a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,0.4)}
+.map-embed{border-radius:16px;overflow:hidden;height:280px;margin-top:24px;box-shadow:var(--shadow);}
+.map-embed iframe{width:100%;height:100%;border:none}
+.contact-form{background:var(--cream);border-radius:24px;padding:36px;box-shadow:var(--shadow);}
+.contact-form h3{font-family:var(--font-serif);font-size:1.4rem;color:var(--text-dark);margin-bottom:22px;}
+.cf-field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.cf-field label{font-size:0.8rem;font-weight:600;color:var(--green-deep);letter-spacing:0.5px;text-transform:uppercase}
+.cf-field input,.cf-field textarea{padding:12px 14px;border-radius:10px;border:1.5px solid rgba(74,140,92,0.2);background:var(--white);color:var(--text-dark);font-size:0.9rem;transition:var(--transition);outline:none;}
+.cf-field input:focus,.cf-field textarea:focus{border-color:var(--green-mid);box-shadow:0 0 0 3px rgba(45,90,61,0.08)}
+.cf-field textarea{resize:vertical;min-height:110px}
+.cf-submit{width:100%;padding:14px;border-radius:12px;background:linear-gradient(135deg,var(--green-deep),var(--green-mid));color:var(--white);font-size:0.92rem;font-weight:600;transition:var(--transition);}
+.cf-submit:hover{background:linear-gradient(135deg,var(--green-mid),var(--green-light));transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);padding:50px 5% 24px;}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-brand .nav-logo{margin-bottom:14px}
+.footer-brand p{font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.7;max-width:260px}
+.footer-col h4{font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:16px;}
+.footer-col ul{display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{font-size:0.85rem;color:rgba(255,255,255,0.55);transition:var(--transition);}
+.footer-col ul a:hover{color:var(--gold-light);padding-left:4px}
+.social-links{display:flex;gap:10px;margin-top:20px}
+.social-link{width:38px;height:38px;border-radius:10px;border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;font-size:1rem;color:rgba(255,255,255,0.6);transition:var(--transition);}
+.social-link:hover{background:rgba(201,168,76,0.15);border-color:var(--gold);color:var(--gold-light);}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bottom p{font-size:0.8rem;color:rgba(255,255,255,0.4)}
+
+/* LOGIN MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(6px);z-index:2000;align-items:center;justify-content:center;}
+.modal-overlay.open{display:flex}
+.modal-box{background:var(--white);border-radius:24px;padding:40px;max-width:420px;width:90%;position:relative;box-shadow:0 30px 80px rgba(0,0,0,0.4);animation:modalIn 0.3s ease;}
+@keyframes modalIn{from{opacity:0;transform:translateY(20px) scale(0.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+.modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--text-mid);cursor:pointer;transition:var(--transition);}
+.modal-close:hover{background:var(--green-pale);color:var(--green-mid)}
+.modal-logo{text-align:center;margin-bottom:24px}
+.modal-logo .ml-icon{width:60px;height:60px;border-radius:16px;margin:0 auto 10px;background:linear-gradient(135deg,var(--green-deep),var(--green-mid));display:flex;align-items:center;justify-content:center;font-size:1.8rem;}
+.modal-logo h2{font-family:var(--font-serif);font-size:1.5rem;color:var(--text-dark)}
+.modal-logo p{font-size:0.82rem;color:var(--text-light);margin-top:4px}
+.login-field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.login-field label{font-size:0.8rem;font-weight:600;color:var(--green-deep);letter-spacing:0.5px;text-transform:uppercase}
+.login-field input{padding:12px 14px;border-radius:10px;border:1.5px solid rgba(74,140,92,0.2);font-size:0.9rem;outline:none;transition:var(--transition);}
+.login-field input:focus{border-color:var(--green-mid);box-shadow:0 0 0 3px rgba(45,90,61,0.08)}
+.login-btn{width:100%;padding:14px;border-radius:12px;margin-top:8px;background:linear-gradient(135deg,var(--green-deep),var(--green-mid));color:var(--white);font-size:0.95rem;font-weight:600;transition:var(--transition);}
+.login-btn:hover{background:linear-gradient(135deg,var(--green-mid),var(--green-light));transform:translateY(-1px)}
+.login-error{display:none;background:#fff0f0;border:1px solid #ffcccc;color:#c0392b;padding:10px 14px;border-radius:8px;font-size:0.82rem;margin-bottom:12px;text-align:center;}
+
+/* ADMIN DASHBOARD */
+#admin{display:none;position:fixed;inset:0;z-index:1500;background:var(--cream);overflow-y:auto;}
+.admin-header{background:var(--green-deep);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;border-bottom:1px solid rgba(201,168,76,0.3);position:sticky;top:0;z-index:10;}
+.admin-logo{font-family:var(--font-serif);font-size:1.2rem;color:var(--gold-light);font-weight:700;}
+.admin-logo span{color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:400;margin-left:8px}
+.admin-header-btns{display:flex;gap:10px;align-items:center}
+.admin-user{font-size:0.83rem;color:rgba(255,255,255,0.65)}
+.logout-btn{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:var(--white);padding:7px 16px;border-radius:8px;font-size:0.82rem;font-weight:500;transition:var(--transition);}
+.logout-btn:hover{background:rgba(255,100,100,0.2);border-color:rgba(255,100,100,0.4)}
+.admin-body{max-width:1200px;margin:0 auto;padding:32px 5%}
+.admin-tabs{display:flex;gap:8px;margin-bottom:28px;border-bottom:2px solid rgba(74,140,92,0.15);padding-bottom:0;}
+.admin-tab{padding:10px 22px;border-radius:10px 10px 0 0;font-size:0.85rem;font-weight:600;color:var(--text-mid);transition:var(--transition);border-bottom:3px solid transparent;margin-bottom:-2px;}
+.admin-tab:hover{color:var(--green-mid)}
+.admin-tab.active{color:var(--green-deep);border-bottom-color:var(--green-mid);background:var(--white)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px;margin-bottom:28px;}
+.stat-card{background:var(--white);border-radius:14px;padding:20px;border:1px solid rgba(74,140,92,0.1);box-shadow:0 2px 12px rgba(0,0,0,0.04);}
+.stat-card .s-num{font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--green-deep);display:block;}
+.stat-card .s-label{font-size:0.78rem;color:var(--text-light);font-weight:500;text-transform:uppercase;letter-spacing:1px}
+.stat-card .s-icon{font-size:1.4rem;margin-bottom:8px}
+.admin-toolbar{display:flex;gap:12px;align-items:center;margin-bottom:20px;flex-wrap:wrap;}
+.admin-search{flex:1;min-width:200px;padding:10px 14px;border-radius:10px;border:1.5px solid rgba(74,140,92,0.2);font-size:0.88rem;outline:none;background:var(--white);transition:var(--transition);}
+.admin-search:focus{border-color:var(--green-mid)}
+.admin-table-wrap{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.05);border:1px solid rgba(74,140,92,0.08);overflow-x:auto;}
+.admin-table{width:100%;border-collapse:collapse;min-width:700px}
+.admin-table th{background:var(--green-deep);color:rgba(255,255,255,0.85);padding:12px 16px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;text-align:left;white-space:nowrap;}
+.admin-table td{padding:12px 16px;font-size:0.85rem;color:var(--text-dark);border-bottom:1px solid rgba(74,140,92,0.07);vertical-align:middle;}
+.admin-table tr:last-child td{border-bottom:none}
+.admin-table tr:hover td{background:var(--green-pale)}
+.status-badge{padding:3px 10px;border-radius:12px;font-size:0.72rem;font-weight:600;}
+.status-Pending{background:#fff8e1;color:#f57c00}
+.status-Confirmed{background:#e8f5e9;color:#388e3c}
+.status-Completed{background:#e3f2fd;color:#1565c0}
+.status-Cancelled{background:#fce4ec;color:#c62828}
+.tbl-actions{display:flex;gap:6px}
+.tbl-btn{padding:5px 10px;border-radius:7px;font-size:0.73rem;font-weight:600;border:1px solid transparent;transition:var(--transition);}
+.tbl-btn-confirm{background:#e8f5e9;color:#388e3c;border-color:#c8e6c9}
+.tbl-btn-confirm:hover{background:#388e3c;color:#fff}
+.tbl-btn-complete{background:#e3f2fd;color:#1565c0;border-color:#bbdefb}
+.tbl-btn-complete:hover{background:#1565c0;color:#fff}
+.tbl-btn-del{background:#fce4ec;color:#c62828;border-color:#ffcdd2}
+.tbl-btn-del:hover{background:#c62828;color:#fff}
+.tbl-btn-cancel{background:#fff8e1;color:#f57c00;border-color:#ffe0b2}
+.tbl-btn-cancel:hover{background:#f57c00;color:#fff}
+.admin-form{background:var(--white);border-radius:16px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.04);border:1px solid rgba(74,140,92,0.08);margin-bottom:24px;}
+.admin-form h4{font-family:var(--font-serif);font-size:1.2rem;color:var(--text-dark);margin-bottom:18px}
+.admin-form-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:end}
+.admin-input{padding:10px 12px;border-radius:9px;border:1.5px solid rgba(74,140,92,0.2);font-size:0.87rem;outline:none;width:100%;transition:var(--transition);background:var(--cream);}
+.admin-input:focus{border-color:var(--green-mid)}
+.admin-label{font-size:0.75rem;font-weight:600;color:var(--green-deep);letter-spacing:0.5px;text-transform:uppercase;display:block;margin-bottom:5px}
+.admin-submit{padding:10px 20px;border-radius:9px;background:linear-gradient(135deg,var(--green-mid),var(--green-light));color:var(--white);font-size:0.87rem;font-weight:600;transition:var(--transition);white-space:nowrap;}
+.admin-submit:hover{background:linear-gradient(135deg,var(--green-deep),var(--green-mid));transform:translateY(-1px)}
+.gallery-admin-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-top:20px;}
+.gad-card{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:1;box-shadow:0 2px 12px rgba(0,0,0,0.1);}
+.gad-card img{width:100%;height:100%;object-fit:cover}
+.gad-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.6);display:flex;flex-direction:column;justify-content:flex-end;padding:10px;opacity:0;transition:var(--transition);}
+.gad-card:hover .gad-overlay{opacity:1}
+.gad-cat{font-size:0.68rem;color:var(--gold-light);font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.gad-title{font-size:0.78rem;color:#fff;margin-bottom:6px}
+.gad-del{background:rgba(198,40,40,0.8);color:#fff;padding:4px 10px;border-radius:6px;font-size:0.72rem;font-weight:600;align-self:flex-start;transition:var(--transition);}
+.gad-del:hover{background:#c62828}
+.testi-admin-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:20px;}
+.tad-card{background:var(--cream);border-radius:12px;padding:16px;border:1px solid rgba(74,140,92,0.12);position:relative;}
+.tad-name{font-weight:700;font-size:0.9rem;color:var(--text-dark);margin-bottom:4px}
+.tad-stars{color:var(--gold);font-size:0.78rem;margin-bottom:8px}
+.tad-text{font-size:0.82rem;color:var(--text-mid);line-height:1.6}
+.tad-actions{display:flex;gap:6px;margin-top:12px}
+.empty-state{text-align:center;padding:40px;color:var(--text-light);font-size:0.9rem;}
+.empty-state .es-icon{font-size:2.5rem;margin-bottom:10px;opacity:0.4}
+
+/* TOAST */
+#toast{position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;flex-direction:column;gap:8px;align-items:flex-end;}
+.toast-msg{background:var(--green-deep);color:var(--white);padding:12px 20px;border-radius:12px;font-size:0.88rem;box-shadow:0 8px 24px rgba(0,0,0,0.2);border-left:4px solid var(--gold);animation:toastIn 0.3s ease;display:flex;align-items:center;gap:8px;}
+.toast-msg.error{background:#c62828;border-left-color:#ff8a80}
+@keyframes toastIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+@keyframes toastOut{to{opacity:0;transform:translateX(20px)}}
+
+/* ANIMATIONS */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+.fade-in{opacity:0;transform:translateY(24px);transition:0.6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-content{grid-template-columns:1fr;gap:40px}
+  .hero-visual{max-width:480px;margin:0 auto}
+  .about-grid{grid-template-columns:1fr}
+  .about-img-stack{max-width:420px;margin:0 auto}
+  .booking-wrap{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  section{padding:60px 5%}
+  .hero-title{font-size:2.4rem}
+  .hero-stats{gap:20px}
+  .hero-stat .num{font-size:1.7rem}
+  .form-grid{grid-template-columns:1fr}
+  .admin-form-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .packages-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero-btns{flex-direction:column}
+  .btn-primary,.btn-outline{text-align:center;justify-content:center}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .admin-tabs{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;-ms-overflow-style:none}
+  .admin-tabs::-webkit-scrollbar{display:none}
+  .admin-tab{white-space:nowrap}
+  .about-features{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo"><span>✦</span> Sabiya's <span>Mehndi Art</span></div>
+  <div class="nav-links">
+    <a href="#hero" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#packages">Packages</a>
+    <a href="#booking">Book Now</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="#" class="nav-cta" id="loginNavBtn">Admin</a>
+  </div>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hero">Home</a>
+  <a href="#about">About</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#packages">Packages</a>
+  <a href="#booking">Book Now</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a href="#" id="loginMobileBtn">Admin Login</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-tag">✦ Premium Mehndi Artist - Vita City</div>
+      <h1 class="hero-title">Adorn Your Hands With<br><span class="gold">Timeless</span> Mehndi Art</h1>
+      <p class="hero-subtitle">Sabiya Bashir Shikalgar - Premium Bridal & Festival Mehndi Artist. Transform your precious moments with intricate, custom mehndi designs exclusively in Vita City.</p>
+      <div class="hero-btns">
+        <a href="#booking" class="btn-primary">✦ Book Your Session</a>
+        <a href="#gallery" class="btn-outline">View Gallery →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="num">200+</span><span class="label">Brides Adorned</span></div>
+        <div class="hero-stat"><span class="num">6+</span><span class="label">Years Crafting</span></div>
+        <div class="hero-stat"><span class="num">15+</span><span class="label">Design Styles</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <img src="static/image1.png" alt="Sabiya applying mehndi - Bridal mehndi work" width="600">
+      </div>
+      <div class="hero-img-badge">
+        <span class="icon">🏆</span>
+        <div class="text"><strong>Best Mehndi Artist</strong>Vita City, 2024</div>
+      </div>
+      <div class="hero-floating-card">
+        <div class="stars">★★★★★</div>
+        <div class="fc-text">200+ Happy Clients</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-center">
+    <div class="about-grid">
+      <!-- ✅ REAL MEHNDI PHOTOS IN ABOUT SECTION -->
+      <div class="about-img-stack fade-in">
+        <div class="about-experience-badge">
+          <span class="yrs">6+</span>
+          <span class="yrs-text">Years Exp.</span>
+        </div>
+        <div class="about-img-main">
+          <img src="static/image2.png" alt="Sabiya applying mehndi - Bridal mehndi work" width="600">
+        </div>
+        <div class="about-img-accent">
+          <img src="static/image3.png" alt="Sabiya applying mehndi - Bridal mehndi work" width="600">
+        </div>
+      </div>
+      <div class="about-content fade-in">
+        <div class="section-header">
+          <div class="section-badge">✦ About Sabiya</div>
+          <h2 class="section-title">Crafting <span class="gold">Beauty</span><br>One Stroke at a Time</h2>
+          <div class="divider"><span>✦</span></div>
+        </div>
+        <p class="about-desc">Assalamu Alaikum! I'm <strong>Sabiya Bashir Shikalgar</strong>, a passionate mehndi artist serving Vita City. My journey started with a deep love for the ancient art of henna, and today I bring that passion to every stroke.</p>
+        <p class="about-desc">I specialise in Bridal, Arabic, Rajasthani, Indo-Arabic fusion, and Modern Minimalist designs — creating pieces that reflect your personality and the joy of your occasion exclusively for clients in Vita City.</p>
+        <div class="about-features">
+          <div class="about-feat"><div class="feat-icon">🎨</div><div class="feat-text"><strong>Custom Designs</strong><span>Tailored to your vision</span></div></div>
+          <div class="about-feat"><div class="feat-icon">🌿</div><div class="feat-text"><strong>Natural Henna</strong><span>100% organic ingredients</span></div></div>
+          <div class="about-feat"><div class="feat-icon">⏱️</div><div class="feat-text"><strong>Punctual</strong><span>Always on time</span></div></div>
+          <div class="about-feat"><div class="feat-icon">🏠</div><div class="feat-text"><strong>Home Service</strong><span>I come to you in Vita</span></div></div>
+        </div>
+        <p class="about-desc" style="margin-bottom:12px"><strong style="color:var(--green-mid)">Service Area:</strong></p>
+        <div class="service-areas">
+          <span class="area-tag">📍 Vita City Only</span>
+          <span class="area-tag">📍 Near Bus Stand Area</span>
+          <span class="area-tag">📍 Home Service Available in Vita</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div class="section-center">
+    <div class="section-header fade-in">
+      <div class="section-badge">✦ Why Choose Sabiya</div>
+      <h2 class="section-title">The <span class="gold">Promise</span> of Excellence</h2>
+      <div class="divider"><span>✦</span></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-in"><div class="why-icon">🌿</div><h3 class="why-title">Organic Henna</h3><p class="why-desc">Only 100% natural, organic henna paste. Safe for all skin types.</p></div>
+      <div class="why-card fade-in"><div class="why-icon">✍️</div><h3 class="why-title">Bespoke Designs</h3><p class="why-desc">Every design is uniquely crafted. I work with you to create something personal.</p></div>
+      <div class="why-card fade-in"><div class="why-icon">⭐</div><h3 class="why-title">200+ Happy Clients</h3><p class="why-desc">A track record of glowing testimonials from clients in Vita City.</p></div>
+      <div class="why-card fade-in"><div class="why-icon">🚗</div><h3 class="why-title">Doorstep Service</h3><p class="why-desc">I travel to your venue, home, or event location in Vita City.</p></div>
+      <div class="why-card fade-in"><div class="why-icon">💰</div><h3 class="why-title">Transparent Pricing</h3><p class="why-desc">Clear packages with no hidden costs. Honest and fair pricing.</p></div>
+      <div class="why-card fade-in"><div class="why-icon">📸</div><h3 class="why-title">Photo Ready</h3><p class="why-desc">Designs crafted to look stunning in photographs. Deep, rich colour.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-center">
+    <div class="section-header fade-in">
+      <div class="section-badge">✦ Portfolio</div>
+      <h2 class="section-title">A Gallery of <span class="gold">Artistry</span></h2>
+      <div class="divider"><span>✦</span></div>
+      <p class="section-desc">Browse through my beautiful designs. Each piece tells a story.</p>
+    </div>
+    <div class="gallery-filters fade-in" id="galleryFilters">
+      <button class="filter-btn active" data-cat="All">All Designs</button>
+      <button class="filter-btn" data-cat="Bridal">Bridal</button>
+      <button class="filter-btn" data-cat="Arabic">Arabic</button>
+      <button class="filter-btn" data-cat="Engagement">Engagement</button>
+      <button class="filter-btn" data-cat="Festival">Festival</button>
+      <button class="filter-btn" data-cat="Modern">Modern</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="section-center">
+    <div class="section-header fade-in">
+      <div class="section-badge">✦ Our Packages</div>
+      <h2 class="section-title" style="color:var(--white)">Choose Your <span style="color:var(--gold-light);font-style:italic">Perfect</span> Package</h2>
+      <div class="divider"><span>✦</span></div>
+      <p class="section-desc">Every package includes natural organic henna. Prices set by Sabiya – contact for exact quote.</p>
+    </div>
+    <div class="packages-grid">
+
+      <!-- ENGAGEMENT PACKAGE -->
+      <div class="pkg-card fade-in">
+        <div class="pkg-icon">💍</div>
+        <div class="pkg-name">Engagement</div>
+        <div class="pkg-price">Contact <span>for price</span></div>
+        <div class="pkg-price-note">💬 WhatsApp karo price ke liye</div>
+        <div class="pkg-duration">⏱ 1–2 Hours</div>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li>Both hands (front & back)</li>
+          <li>Arabic or Indo-Arabic style</li>
+          <li>Wrist & finger detailing</li>
+          <li>Home service in Vita</li>
+          <li>Natural organic henna</li>
+        </ul>
+        <button class="pkg-book-btn" onclick="scrollToBooking('Engagement Package')">Book Now</button>
+      </div>
+
+      <!-- BRIDAL PACKAGE -->
+      <div class="pkg-card featured fade-in">
+        <div class="pkg-featured-badge">✦ Most Popular</div>
+        <div class="pkg-icon">👰</div>
+        <div class="pkg-name">Bridal Full</div>
+        <div class="pkg-price">Contact <span>for price</span></div>
+        <div class="pkg-price-note">💬 WhatsApp karo price ke liye</div>
+        <div class="pkg-duration">⏱ 4–6 Hours</div>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li>Both hands & arms (full)</li>
+          <li>Both feet & legs (full)</li>
+          <li>Custom bridal design</li>
+          <li>Groom name hidden</li>
+          <li>Pre-bridal consultation</li>
+          <li>Touch-up on wedding day</li>
+        </ul>
+        <button class="pkg-book-btn" onclick="scrollToBooking('Bridal Package')">Book Now</button>
+      </div>
+
+      <!-- FAMILY PACKAGE -->
+      <div class="pkg-card fade-in">
+        <div class="pkg-icon">👨‍👩‍👧‍👦</div>
+        <div class="pkg-name">Family Package</div>
+        <div class="pkg-price">Contact <span>for price</span></div>
+        <div class="pkg-price-note">💬 WhatsApp karo price ke liye</div>
+        <div class="pkg-duration">⏱ 3–4 Hours</div>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li>Up to 5 family members</li>
+          <li>Mix of simple & medium designs</li>
+          <li>Arabic or traditional style</li>
+          <li>Home service available</li>
+          <li>Natural organic henna</li>
+        </ul>
+        <button class="pkg-book-btn" onclick="scrollToBooking('Family Package')">Book Now</button>
+      </div>
+
+      <!-- FESTIVAL PACKAGE -->
+      <div class="pkg-card fade-in">
+        <div class="pkg-icon">🎉</div>
+        <div class="pkg-name">Festival Special</div>
+        <div class="pkg-price">Contact <span>for price</span></div>
+        <div class="pkg-price-note">💬 WhatsApp karo price ke liye</div>
+        <div class="pkg-duration">⏱ 30–60 Min</div>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li>Single hand design</li>
+          <li>Festive motifs (Eid, Diwali etc)</li>
+          <li>Express application</li>
+          <li>Kids' mehndi available</li>
+          <li>Natural organic henna</li>
+        </ul>
+        <button class="pkg-book-btn" onclick="scrollToBooking('Festival Package')">Book Now</button>
+      </div>
+
+      <!-- CUSTOM PACKAGE -->
+      <div class="pkg-card fade-in">
+        <div class="pkg-icon">✨</div>
+        <div class="pkg-name">Custom Package</div>
+        <div class="pkg-price">Contact <span>for price</span></div>
+        <div class="pkg-price-note">💬 WhatsApp karo price ke liye</div>
+        <div class="pkg-duration">⏱ As Per Scope</div>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li>Corporate events & parties</li>
+          <li>Photoshoots & fashion shows</li>
+          <li>Workshops & training</li>
+          <li>Large-scale events</li>
+          <li>Fully customisable</li>
+        </ul>
+        <button class="pkg-book-btn" onclick="scrollToBooking('Custom Package')">Get Quote</button>
+      </div>
+
+    </div>
+    <!-- WhatsApp button for prices -->
+    <div style="text-align:center;margin-top:36px;">
+      <a href="https://wa.me/919763142964?text=Hi Sabiya! Package ki price janani hai." target="_blank" class="wa-btn" style="display:inline-flex;">
+        💬 Price Puchne ke Liye WhatsApp Karo
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="section-center">
+    <div class="section-header fade-in">
+      <div class="section-badge">✦ Book A Session</div>
+      <h2 class="section-title">Reserve Your <span class="gold">Appointment</span></h2>
+      <div class="divider"><span>✦</span></div>
+    </div>
+    <div class="booking-wrap">
+      <div class="booking-info fade-in">
+        <h2>Let's Create Something Beautiful Together</h2>
+        <p>Fill in the form to book your mehndi session. I'll confirm within 24 hours. For urgent bookings, WhatsApp me directly!</p>
+        <div class="booking-contact-items">
+          <div class="bci"><div class="bci-icon">📞</div><div class="bci-text"><strong>+91 97631 42964</strong><span>Call or WhatsApp anytime</span></div></div>
+          <div class="bci"><div class="bci-icon">📍</div><div class="bci-text"><strong>Near Bus Stand, Vita City</strong><span>Home service across Vita City</span></div></div>
+          <div class="bci"><div class="bci-icon">🕐</div><div class="bci-text"><strong>Available 7 Days a Week</strong><span>8 AM – 9 PM</span></div></div>
+        </div>
+        <a href="https://wa.me/919763142964?text=Hi Sabiya! I'd like to book a mehndi session in Vita City." class="wa-btn" target="_blank">💬 WhatsApp Me Now</a>
+      </div>
+      <div class="booking-form-card fade-in">
+        <h3>✦ Booking Form</h3>
+        <div id="bookingFormWrap">
+          <div class="form-grid" id="bookingForm">
+            <div class="form-group"><label>Your Name *</label><input type="text" id="b_name" placeholder="Full Name" required/></div>
+            <div class="form-group"><label>Mobile Number *</label><input type="tel" id="b_mobile" placeholder="+91 XXXXX XXXXX" required/></div>
+            <div class="form-group"><label>Email Address</label><input type="email" id="b_email" placeholder="your@email.com"/></div>
+            <div class="form-group"><label>Event Type *</label>
+              <select id="b_event">
+                <option value="">Select Event</option>
+                <option>Wedding / Bridal</option>
+                <option>Engagement</option>
+                <option>Festival (Eid / Diwali)</option>
+                <option>Baby Shower</option>
+                <option>Birthday Party</option>
+                <option>Corporate Event</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Event Date *</label><input type="date" id="b_date" required/></div>
+            <div class="form-group"><label>Preferred Time</label><input type="time" id="b_time"/></div>
+            <div class="form-group full"><label>Full Address (Vita City)</label><input type="text" id="b_address" placeholder="House/Flat No., Street, Area, Vita City"/></div>
+            <div class="form-group"><label>City</label><input type="text" id="b_city" placeholder="Vita City" value="Vita City" readonly/></div>
+            <div class="form-group"><label>Number of People</label><input type="number" id="b_people" placeholder="1" min="1" value="1"/></div>
+            <div class="form-group full"><label>Package Selection</label>
+              <select id="b_package">
+                <option value="">Choose Package</option>
+                <option>Engagement Package</option>
+                <option>Bridal Package</option>
+                <option>Family Package</option>
+                <option>Festival Package</option>
+                <option>Custom Package</option>
+              </select>
+            </div>
+            <div class="form-group full"><label>Additional Notes</label><textarea id="b_notes" placeholder="Design preferences, references, special requirements..."></textarea></div>
+          </div>
+          <button class="submit-btn" onclick="submitBooking()">✦ Confirm Booking</button>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="check">✓</div>
+          <h4>Booking Received!</h4>
+          <p>Thank you! I'll confirm your session within 24 hours.</p>
+          <div class="bid" id="successBid"></div>
+          <p style="margin-top:14px;font-size:0.82rem;color:var(--text-light)">Check your WhatsApp for updates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-center">
+    <div class="section-header fade-in">
+      <div class="section-badge">✦ Client Love</div>
+      <h2 class="section-title">What My <span class="gold">Clients</span> Say</h2>
+      <div class="divider"><span>✦</span></div>
+    </div>
+    <div class="testimonials-grid" id="testiGrid"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-center">
+    <div class="section-header fade-in">
+      <div class="section-badge">✦ Get In Touch</div>
+      <h2 class="section-title">Let's <span class="gold">Connect</span></h2>
+      <div class="divider"><span>✦</span></div>
+    </div>
+    <div class="contact-grid">
+      <div class="fade-in">
+        <div class="contact-info">
+          <h3>Sabiya Bashir Shikalgar</h3>
+          <p>Premium mehndi artist serving Vita City. Book your appointment today!</p>
+          <div class="contact-items">
+            <div class="contact-item"><div class="ci-icon">📞</div><div class="ci-text"><strong>+91 97631 42964</strong><span>Call for bookings</span></div></div>
+            <div class="contact-item"><div class="ci-icon">💬</div><div class="ci-text"><strong>WhatsApp: +91 97631 42964</strong><span>Quick responses on WhatsApp</span></div></div>
+            <div class="contact-item"><div class="ci-icon">📍</div><div class="ci-text"><strong>Near Bus Stand, Vita City</strong><span>Home service available across Vita City</span></div></div>
+          </div>
+          <a href="https://wa.me/919763142964" target="_blank" class="wa-btn">💬 Chat on WhatsApp</a>
+        </div>
+        <div class="map-embed">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19182.20236624276!2d74.666042!3d16.980219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1c7e8e2b6c6d7%3A0x4a5b6c7d8e9f0a1b!2sVita%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1690000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Vita City Location Map"></iframe>
+        </div>
+      </div>
+      <div class="contact-form fade-in">
+        <h3>✦ Send a Message</h3>
+        <div class="cf-field"><label>Your Name</label><input type="text" id="cf_name" placeholder="Your full name"/></div>
+        <div class="cf-field"><label>Email Address</label><input type="email" id="cf_email" placeholder="your@email.com"/></div>
+        <div class="cf-field"><label>Subject</label><input type="text" id="cf_subject" placeholder="Booking enquiry..."/></div>
+        <div class="cf-field"><label>Message</label><textarea id="cf_msg" placeholder="Tell me about your event..."></textarea></div>
+        <button class="cf-submit" onclick="sendContact()">Send Message ✦</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">✦ Sabiya's<span>Mehndi Art</span></div>
+      <p>Premium bridal and festival mehndi artist serving Vita City. Adorning life's most precious moments with timeless henna art.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+        <a href="#" class="social-link" aria-label="Pinterest">📌</a>
+        <a href="https://wa.me/919763142964" class="social-link" aria-label="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="#hero">Home</a></li><li><a href="#about">About</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#packages">Packages</a></li></ul></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="#packages">Bridal Mehndi</a></li><li><a href="#packages">Arabic Mehndi</a></li><li><a href="#packages">Festival Mehndi</a></li><li><a href="#packages">Custom Designs</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+919763142964">📞 +91 97631 42964</a></li><li><a href="mailto:sabiya@mehndiart.com">Email Me</a></li><li><a href="#contact">📍 Near Bus Stand, Vita City</a></li><li><a href="#booking">Book Now</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Sabiya Bashir Shikalgar - Mehndi Art. Serving only Vita City, Maharashtra.</p>
+    <p>Made with ❤️ in Vita City</p>
+  </div>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal-box">
+    <div class="modal-close" onclick="closeLogin()">✕</div>
+    <div class="modal-logo">
+      <div class="ml-icon">🔐</div>
+      <h2>Admin Login</h2>
+      <p>Sabiya's Mehndi Art Dashboard</p>
+    </div>
+    <div class="login-error" id="loginError"></div>
+    <div class="login-field">
+      <label>Username</label>
+      <input type="text" id="loginUser" placeholder="sabiya" autocomplete="username"/>
+    </div>
+    <div class="login-field">
+      <label>Password</label>
+      <input type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()"/>
+    </div>
+    <button class="login-btn" onclick="doLogin()">Login to Dashboard</button>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin">
+  <div class="admin-header">
+    <div class="admin-logo">✦ Sabiya's Mehndi Art <span>Admin Dashboard</span></div>
+    <div class="admin-header-btns">
+      <span class="admin-user" id="adminUserLabel"></span>
+      <button class="logout-btn" onclick="doLogout()">Logout</button>
+    </div>
+  </div>
+  <div class="admin-body">
+    <div class="stats-grid" id="statsGrid">
+      <div class="stat-card"><span class="s-icon">📋</span><span class="s-num" id="st-total">0</span><span class="s-label">Total Bookings</span></div>
+      <div class="stat-card"><span class="s-icon">⏳</span><span class="s-num" id="st-pending">0</span><span class="s-label">Pending</span></div>
+      <div class="stat-card"><span class="s-icon">✅</span><span class="s-num" id="st-confirmed">0</span><span class="s-label">Confirmed</span></div>
+      <div class="stat-card"><span class="s-icon">🏁</span><span class="s-num" id="st-completed">0</span><span class="s-label">Completed</span></div>
+      <div class="stat-card"><span class="s-icon">📅</span><span class="s-num" id="st-upcoming">0</span><span class="s-label">Upcoming</span></div>
+    </div>
+    <div class="admin-tabs">
+      <button class="admin-tab active" onclick="showTab('tab-bookings',this)">📋 Bookings</button>
+      <button class="admin-tab" onclick="showTab('tab-gallery',this)">🖼️ Gallery</button>
+      <button class="admin-tab" onclick="showTab('tab-testimonials',this)">💬 Testimonials</button>
+    </div>
+    <div class="tab-content active" id="tab-bookings">
+      <div class="admin-toolbar">
+        <input type="text" class="admin-search" id="bookingSearch" placeholder="🔍 Search by name, ID, mobile..." oninput="searchBookings()"/>
+        <button class="admin-submit" onclick="loadBookings()">↻ Refresh</button>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="bookingsTable">
+          <thead><tr><th>Booking ID</th><th>Customer</th><th>Mobile</th><th>Event</th><th>Date</th><th>Package</th><th>People</th><th>City</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody id="bookingsBody"><tr><td colspan="10" class="empty-state"><div class="es-icon">📋</div>Loading bookings...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="tab-content" id="tab-gallery">
+      <div class="admin-form">
+        <h4>➕ Add Gallery Image</h4>
+        <div class="admin-form-grid">
+          <div><label class="admin-label">Image URL *</label><input type="url" class="admin-input" id="g_url" placeholder="https://..."/></div>
+          <div><label class="admin-label">Category *</label><select class="admin-input" id="g_cat"><option value="">Select Category</option><option>Bridal</option><option>Arabic</option><option>Engagement</option><option>Festival</option><option>Modern</option></select></div>
+          <div><label class="admin-label">Title</label><input type="text" class="admin-input" id="g_title" placeholder="Design title"/></div>
+        </div>
+        <button class="admin-submit" style="margin-top:14px" onclick="addGalleryItem()">Add to Gallery</button>
+      </div>
+      <div class="gallery-admin-grid" id="galleryAdminGrid"><div class="empty-state"><div class="es-icon">🖼️</div>Loading gallery...</div></div>
+    </div>
+    <div class="tab-content" id="tab-testimonials">
+      <div class="admin-form">
+        <h4>➕ Add Testimonial</h4>
+        <div class="admin-form-grid">
+          <div><label class="admin-label">Customer Name *</label><input type="text" class="admin-input" id="t_name" placeholder="Priya Sharma"/></div>
+          <div><label class="admin-label">Rating</label><select class="admin-input" id="t_rating"><option value="5">★★★★★ (5)</option><option value="4">★★★★☆ (4)</option><option value="3">★★★☆☆ (3)</option></select></div>
+          <div><label class="admin-label">Review *</label><input type="text" class="admin-input" id="t_review" placeholder="Wonderful experience..."/></div>
+        </div>
+        <button class="admin-submit" style="margin-top:14px" onclick="addTestimonial()">Add Testimonial</button>
+      </div>
+      <div class="testi-admin-grid" id="testiAdminGrid"><div class="empty-state"><div class="es-icon">💬</div>Loading testimonials...</div></div>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+// ══════════════════════════════════════════
+// CONFIG — Python server chal raha hai toh true, nahi toh false
+// ══════════════════════════════════════════
+const BACKEND_AVAILABLE = window.location.protocol !== 'file:' && window.location.port !== '';
+
+// Local storage based admin system (works WITHOUT Python)
+const LOCAL_ADMIN = {
+  users: { 'sabiya': 'sabiya123', 'admin': 'admin123' },
+  bookings: JSON.parse(localStorage.getItem('mehndi_bookings') || '[]'),
+  gallery: JSON.parse(localStorage.getItem('mehndi_gallery') || JSON.stringify([
+    {id:1,image_url:'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&auto=format&fit=crop',category:'Bridal',title:'Royal Bridal Full Hand'},
+    {id:2,image_url:'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&auto=format&fit=crop',category:'Bridal',title:'Intricate Bridal Feet'},
+    {id:3,image_url:'https://images.unsplash.com/photo-1570194065650-d99fb4d8a84b?w=600&auto=format&fit=crop',category:'Arabic',title:'Floral Arabic Design'},
+    {id:4,image_url:'https://images.unsplash.com/photo-1583492454297-0f98f7b72726?w=600&auto=format&fit=crop',category:'Arabic',title:'Bold Arabic Pattern'},
+    {id:5,image_url:'https://images.unsplash.com/photo-1607827448299-a099b845f076?w=600&auto=format&fit=crop',category:'Engagement',title:'Elegant Engagement Mehndi'},
+    {id:6,image_url:'https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=600&auto=format&fit=crop',category:'Festival',title:'Diwali Special Design'},
+    {id:7,image_url:'https://images.unsplash.com/photo-1583492454200-9d6ac80be6f2?w=600&auto=format&fit=crop',category:'Modern',title:'Minimalist Modern Art'},
+    {id:8,image_url:'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&auto=format&fit=crop&q=80',category:'Bridal',title:'Dulhan Mehndi Back Hand'},
+  ])),
+  testimonials: JSON.parse(localStorage.getItem('mehndi_testimonials') || JSON.stringify([
+    {id:1,customer_name:'Priya Sharma',review:"Absolutely stunning bridal mehndi! Sabiya's artistry is unmatched. I felt like a queen on my wedding day!",rating:5},
+    {id:2,customer_name:'Anjali Mehta',review:'Booked for my engagement and the Arabic pattern was breathtaking. Very professional and on time!',rating:5},
+    {id:3,customer_name:'Neha Patel',review:'The festival mehndi package was so affordable yet the quality was top-notch!',rating:5},
+  ])),
+  save() {
+    localStorage.setItem('mehndi_bookings', JSON.stringify(this.bookings));
+    localStorage.setItem('mehndi_gallery', JSON.stringify(this.gallery));
+    localStorage.setItem('mehndi_testimonials', JSON.stringify(this.testimonials));
+  }
+};
+
+let isLoggedIn = false;
+let currentUser = '';
+let allGalleryItems = [];
+let allBookings = [];
+let currentGalleryFilter = 'All';
+
+function showToast(msg, isError = false) {
+  const container = document.getElementById('toast');
+  const el = document.createElement('div');
+  el.className = 'toast-msg' + (isError ? ' error' : '');
+  el.innerHTML = (isError ? '⚠ ' : '✓ ') + msg;
+  container.appendChild(el);
+  setTimeout(() => { el.style.animation = 'toastOut 0.3s ease forwards'; setTimeout(() => el.remove(), 350); }, 3500);
+}
+
+// NAVBAR
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  const sections = ['hero','about','why','gallery','packages','booking','testimonials','contact'];
+  let cur = '';
+  sections.forEach(id => { const el = document.getElementById(id); if (el && window.scrollY >= el.offsetTop - 100) cur = id; });
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+});
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+const observer = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.getElementById('b_date').min = new Date().toISOString().split('T')[0];
+
+// ══════════════════════════════════════════
+// GALLERY
+// ══════════════════════════════════════════
+async function loadGallery() {
+  if (BACKEND_AVAILABLE) {
+    try {
+      const res = await fetch('/gallery');
+      if (res.ok) { allGalleryItems = await res.json(); renderGallery(currentGalleryFilter); return; }
+    } catch(e) {}
+  }
+  allGalleryItems = LOCAL_ADMIN.gallery;
+  renderGallery(currentGalleryFilter);
+}
+
+function renderGallery(filter) {
+  currentGalleryFilter = filter;
+  const grid = document.getElementById('galleryGrid');
+  const items = filter === 'All' ? allGalleryItems : allGalleryItems.filter(g => g.category === filter);
+  if (!items.length) { grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="es-icon">🖼️</div>No designs in this category yet.</div>'; return; }
+  grid.innerHTML = items.map(g => `
+    <div class="gallery-item fade-in">
+      <span class="gallery-cat-badge">${g.category}</span>
+      <img src="${g.image_url}" alt="${g.title || g.category + ' Mehndi'}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400'"/>
+      <div class="gallery-overlay">
+        <div class="gallery-label">
+          <div class="cat">${g.category}</div>
+          <div class="title">${g.title || 'Mehndi Design'}</div>
+        </div>
+      </div>
+    </div>`).join('');
+  grid.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+}
+
+document.getElementById('galleryFilters').addEventListener('click', e => {
+  if (e.target.classList.contains('filter-btn')) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    renderGallery(e.target.dataset.cat);
+  }
+});
+
+// ══════════════════════════════════════════
+// TESTIMONIALS
+// ══════════════════════════════════════════
+async function loadTestimonials() {
+  let items = [];
+  if (BACKEND_AVAILABLE) {
+    try { const res = await fetch('/testimonials'); if (res.ok) { items = await res.json(); } } catch(e) {}
+  }
+  if (!items.length) items = LOCAL_ADMIN.testimonials;
+  const grid = document.getElementById('testiGrid');
+  if (!items.length) { grid.innerHTML = '<p class="empty-state">No testimonials yet.</p>'; return; }
+  const stars = n => '★'.repeat(n) + '☆'.repeat(5-n);
+  grid.innerHTML = items.map(t => `
+    <div class="testi-card fade-in">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">${t.review}</p>
+      <div class="testi-footer">
+        <div class="testi-avatar">${t.customer_name.charAt(0)}</div>
+        <div><div class="testi-name">${t.customer_name}</div><div class="testi-stars">${stars(t.rating)}</div></div>
+      </div>
+    </div>`).join('');
+  grid.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+}
+
+function scrollToBooking(pkg) {
+  document.getElementById('booking').scrollIntoView({behavior:'smooth'});
+  if (pkg) { setTimeout(() => { const sel = document.getElementById('b_package'); for (let i = 0; i < sel.options.length; i++) { if (sel.options[i].text === pkg) { sel.value = sel.options[i].value; break; } } }, 600); }
+}
+
+// ══════════════════════════════════════════
+// BOOKING FORM SUBMIT
+// ══════════════════════════════════════════
+async function submitBooking() {
+  const name = document.getElementById('b_name').value.trim();
+  const mobile = document.getElementById('b_mobile').value.trim();
+  const event = document.getElementById('b_event').value;
+  const date = document.getElementById('b_date').value;
+  if (!name) { showToast('Please enter your name.', true); return; }
+  if (!mobile || mobile.replace(/\D/g,'').length < 7) { showToast('Please enter a valid mobile number.', true); return; }
+  if (!event) { showToast('Please select an event type.', true); return; }
+  if (!date) { showToast('Please select an event date.', true); return; }
+  
+  const btn = document.querySelector('.submit-btn');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  
+  const payload = {
+    customer_name: name, mobile: mobile,
+    email: document.getElementById('b_email').value.trim(),
+    event_type: event, event_date: date,
+    event_time: document.getElementById('b_time').value,
+    address: document.getElementById('b_address').value.trim(),
+    city: 'Vita City',
+    people_count: parseInt(document.getElementById('b_people').value) || 1,
+    package_name: document.getElementById('b_package').value,
+    notes: document.getElementById('b_notes').value.trim(),
+  };
+
+  // Try Python backend first
+  if (BACKEND_AVAILABLE) {
+    try {
+      const res = await fetch('/book', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success) { showSuccess(data.booking_id); return; }
+      }
+    } catch(e) {}
+  }
+
+  // Fallback: Save locally
+  const bid = 'MHD' + new Date().toISOString().slice(2,8).replace(/-/g,'') + Math.random().toString(36).slice(2,6).toUpperCase();
+  payload.booking_id = bid;
+  payload.booking_status = 'Pending';
+  payload.id = Date.now();
+  payload.created_at = new Date().toISOString();
+  LOCAL_ADMIN.bookings.push(payload);
+  LOCAL_ADMIN.save();
+  showSuccess(bid);
+}
+
+function showSuccess(bid) {
+  document.getElementById('bookingFormWrap').style.display = 'none';
+  const s = document.getElementById('formSuccess');
+  s.style.display = 'block';
+  document.getElementById('successBid').textContent = '📋 ' + bid;
+  showToast('Booking confirmed! ID: ' + bid);
+}
+
+function sendContact() {
+  const name = document.getElementById('cf_name').value.trim();
+  const msg = document.getElementById('cf_msg').value.trim();
+  if (!name || !msg) { showToast('Please fill in your name and message.', true); return; }
+  showToast('Message sent! I\'ll get back to you soon. ✦');
+  ['cf_name','cf_email','cf_subject','cf_msg'].forEach(id => document.getElementById(id).value = '');
+}
+
+// ══════════════════════════════════════════
+// LOGIN — Works with Python AND without Python
+// ══════════════════════════════════════════
+function openLogin() { document.getElementById('loginModal').classList.add('open'); setTimeout(() => document.getElementById('loginUser').focus(), 100); }
+function closeLogin() { document.getElementById('loginModal').classList.remove('open'); }
+document.getElementById('loginNavBtn').addEventListener('click', e => { e.preventDefault(); openLogin(); });
+document.getElementById('loginMobileBtn').addEventListener('click', e => { e.preventDefault(); openLogin(); mobileMenu.classList.remove('open'); });
+document.getElementById('loginModal').addEventListener('click', e => { if (e.target === e.currentTarget) closeLogin(); });
+
+async function doLogin() {
+  const user = document.getElementById('loginUser').value.trim();
+  const pass = document.getElementById('loginPass').value;
+  const errEl = document.getElementById('loginError');
+  errEl.style.display = 'none';
+  if (!user || !pass) { errEl.textContent = 'Please enter username and password.'; errEl.style.display = 'block'; return; }
+
+  // Try Python backend first
+  if (BACKEND_AVAILABLE) {
+    try {
+      const res = await fetch('/login', { method:'POST', headers:{'Content-Type':'application/json'}, credentials:'include', body:JSON.stringify({username:user, password:pass}) });
+      const data = await res.json();
+      if (data.success) { closeLogin(); isLoggedIn = true; currentUser = user; openAdmin(data.username); return; }
+      if (!res.ok) {
+        // Backend failed — try local
+      }
+    } catch(e) {}
+  }
+
+  // Local login (works without Python)
+  if (LOCAL_ADMIN.users[user] === pass) {
+    closeLogin();
+    isLoggedIn = true;
+    currentUser = user;
+    openAdmin(user);
+    showToast('Logged in locally (Python server not running)');
+  } else {
+    errEl.textContent = 'Invalid username or password.';
+    errEl.style.display = 'block';
+  }
+}
+
+async function doLogout() {
+  if (BACKEND_AVAILABLE) { try { await fetch('/logout', {method:'POST', credentials:'include'}); } catch(e) {} }
+  isLoggedIn = false;
+  currentUser = '';
+  document.getElementById('admin').style.display = 'none';
+  document.body.style.overflow = '';
+  showToast('Logged out successfully.');
+}
+
+function openAdmin(username) {
+  document.getElementById('admin').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  document.getElementById('adminUserLabel').textContent = '👤 ' + username;
+  loadStats();
+  loadBookings();
+  loadGalleryAdmin();
+  loadTestiAdmin();
+}
+
+function showTab(tabId, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.admin-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ══════════════════════════════════════════
+// ADMIN — STATS
+// ══════════════════════════════════════════
+async function loadStats() {
+  if (BACKEND_AVAILABLE) {
+    try {
+      const res = await fetch('/admin/bookings/stats', {credentials:'include'});
+      if (res.ok) {
+        const d = await res.json();
+        document.getElementById('st-total').textContent = d.total;
+        document.getElementById('st-pending').textContent = d.pending;
+        document.getElementById('st-confirmed').textContent = d.confirmed;
+        document.getElementById('st-completed').textContent = d.completed;
+        document.getElementById('st-upcoming').textContent = d.upcoming;
+        return;
+      }
+    } catch(e) {}
+  }
+  // Local stats
+  const b = LOCAL_ADMIN.bookings;
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('st-total').textContent = b.length;
+  document.getElementById('st-pending').textContent = b.filter(x=>x.booking_status==='Pending').length;
+  document.getElementById('st-confirmed').textContent = b.filter(x=>x.booking_status==='Confirmed').length;
+  document.getElementById('st-completed').textContent = b.filter(x=>x.booking_status==='Completed').length;
+  document.getElementById('st-upcoming').textContent = b.filter(x=>x.event_date>=today).length;
+}
+
+// ══════════════════════════════════════════
+// ADMIN — BOOKINGS
+// ══════════════════════════════════════════
+async function loadBookings(query = '') {
+  if (BACKEND_AVAILABLE) {
+    try {
+      const res = await fetch('/admin/bookings?q=' + encodeURIComponent(query), {credentials:'include'});
+      if (res.ok) { allBookings = await res.json(); renderBookings(allBookings); return; }
+    } catch(e) {}
+  }
+  // Local
+  const q = query.toLowerCase();
+  allBookings = q ? LOCAL_ADMIN.bookings.filter(b => 
+    b.customer_name.toLowerCase().includes(q) || 
+    b.mobile.includes(q) || 
+    b.booking_id.toLowerCase().includes(q)
+  ) : [...LOCAL_ADMIN.bookings];
+  renderBookings(allBookings);
+}
+
+function searchBookings() { loadBookings(document.getElementById('bookingSearch').value.trim()); }
+
+function renderBookings(bookings) {
+  const tbody = document.getElementById('bookingsBody');
+  if (!bookings.length) { tbody.innerHTML = '<tr><td colspan="10" class="empty-state"><div class="es-icon">📋</div>No bookings found.</td></tr>'; return; }
+  tbody.innerHTML = bookings.map(b => `
+    <tr><td><strong>${b.booking_id}</strong></td><td>${b.customer_name}</td><td>${b.mobile}</td><td>${b.event_type}</td><td>${b.event_date}</td><td>${b.package_name||'—'}</td><td>${b.people_count}</td><td>${b.city||'—'}</td>
+    <td><span class="status-badge status-${b.booking_status}">${b.booking_status}</span></td>
+    <td><div class="tbl-actions">
+      ${b.booking_status!=='Confirmed'?`<button class="tbl-btn tbl-btn-confirm" onclick="updateBookingStatus(${b.id},'Confirmed')">Confirm</button>`:''}
+      ${b.booking_status!=='Completed'?`<button class="tbl-btn tbl-btn-complete" onclick="updateBookingStatus(${b.id},'Completed')">Done</button>`:''}
+      ${b.booking_status!=='Cancelled'?`<button class="tbl-btn tbl-btn-cancel" onclick="updateBookingStatus(${b.id},'Cancelled')">Cancel</button>`:''}
+      <button class="tbl-btn tbl-btn-del" onclick="deleteBooking(${b.id})">Delete</button>
+    </div></td></tr>`).join('');
+}
+
+async function updateBookingStatus(id, status) {
+  if (BACKEND_AVAILABLE) {
+    try {
+      const res = await fetch(`/admin/booking/${id}`, {method:'PUT', headers:{'Content-Type':'application/json'}, credentials:'include', body:JSON.stringify({booking_status:status})});
+      if (res.ok) { showToast(`Booking marked as ${status}`); loadBookings(); loadStats(); return; }
+    } catch(e) {}
+  }
+  const b = LOCAL_ADMIN.bookings.find(x => x.id === id);
+  if (b) { b.booking_status = status; LOCAL_ADMIN.save(); showToast(`Booking marked as ${status}`); loadBookings(); loadStats(); }
+}
+
+async function deleteBooking(id) {
+  if (!confirm('Delete this booking? This cannot be undone.')) return;
+  if (BACKEND_AVAILABLE) {
+    try {
+      const res = await fetch(`/admin/booking/${id}`, {method:'DELETE', credentials:'include'});
+      if (res.ok) { showToast('Booking deleted.'); loadBookings(); loadStats(); return; }
+    } catch(e) {}
+  }
+  LOCAL_ADMIN.bookings = LOCAL_ADMIN.bookings.filter(x => x.id !== id);
+  LOCAL_ADMIN.save(); showToast('Booking deleted.'); loadBookings(); loadStats();
+}
+
+// ══════════════════════════════════════════
+// ADMIN — GALLERY
+// ══════════════════════════════════════════
+async function loadGalleryAdmin() {
+  if (BACKEND_AVAILABLE) {
+    try {
+      const res = await fetch('/gallery');
+      if (res.ok) { renderGalleryAdmin(await res.json()); return; }
+    } catch(e) {}
+  }
+  renderGalleryAdmin(LOCAL_ADMIN.gallery);
+}
+
+function renderGalleryAdmin(items) {
+  const grid = document.getElementById('galleryAdminGrid');
+  if (!items.length) { grid.innerHTML = '<div class="empty-state"><div class="es-icon">🖼️</div>No gallery items.</div>'; return; }
+  grid.innerHTML = items.map(g => `<div class="gad-card"><img src="${g.image_url}" alt="${g.title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=300'"/><div class="gad-overlay"><div class="gad-cat">${g.category}</div><div class="gad-title">${g.title||'Untitled'}</div><button class="gad-del" onclick="deleteGalleryItem(${g.id})">🗑 Delete</button></div></div>`).join('');
+}
+
+async function addGalleryItem() {
+  const url = document.getElementById('g_url').value.trim();
+  const cat = document.getElementById('g_cat').value;
+  const title = document.getElementById('g_title').value.trim();
+  if (!url || !cat) { showToast('Image URL and category are required.', true); return; }
+  if (BACKEND_AVAILABLE) {
+    try {
+      const res = await fetch('/gallery', {method:'POST', headers:{'Content-Type':'application/json'}, credentials:'include', body:JSON.stringify({image_url:url, category:cat, title})});
+      if (res.ok) { showToast('Gallery item added!'); document.getElementById('g_url').value=''; document.getElementById('g_cat').value=''; document.getElementById('g_title').value=''; loadGalleryAdmin(); loadGallery(); return; }
+    } catch(e) {}
+  }
+  // Local
+  const newItem = {id: Date.now(), image_url: url, category: cat, title};
+  LOCAL_ADMIN.gallery.push(newItem); LOCAL_ADMIN.save();
+  showToast('Gallery item added!');
+  document.getElementById('g_url').value=''; document.getElementById('g_cat').value=''; document.getElementById('g_title').value='';
+  loadGalleryAdmin(); loadGallery();
+}
+
+async function deleteGalleryItem(id) {
+  if (!confirm('Delete this gallery item?')) return;
+  if (BACKEND_AVAILABLE) {
+    try {
+      const res = await fetch(`/gallery/${id}`, {method:'DELETE', credentials:'include'});
+      if (res.ok) { showToast('Gallery item deleted.'); loadGalleryAdmin(); loadGallery(); return; }
+    } catch(e) {}
+  }
+  LOCAL_ADMIN.gallery = LOCAL_ADMIN.gallery.filter(x => x.id !== id); LOCAL_ADMIN.save();
+  showToast('Gallery item deleted.'); loadGalleryAdmin(); loadGallery();
+}
+
+// ══════════════════════════════════════════
+// ADMIN — TESTIMONIALS
+// ══════════════════════════════════════════
+async function loadTestiAdmin() {
+  if (BACKEND_AVAILABLE) {
+    try {
+      const res = await fetch('/testimonials');
+      if (res.ok) { renderTestiAdmin(await res.json()); return; }
+    } catch(e) {}
+  }
+  renderTestiAdmin(LOCAL_ADMIN.testimonials);
+}
+
+function renderTestiAdmin(items) {
+  const grid = document.getElementById('testiAdminGrid');
+  if (!items.length) { grid.innerHTML = '<div class="empty-state"><div class="es-icon">💬</div>No testimonials.</div>'; return; }
+  const stars = n => '★'.repeat(n) + '☆'.repeat(5-n);
+  grid.innerHTML = items.map(t => `<div class="tad-card"><div class="tad-name">${t.customer_name}</div><div class="tad-stars">${stars(t.rating)}</div><p class="tad-text">${t.review}</p><div class="tad-actions"><button class="tbl-btn tbl-btn-del" onclick="deleteTestimonial(${t.id})">🗑 Delete</button></div></div>`).join('');
+}
+
+async function addTestimonial() {
+  const name = document.getElementById('t_name').value.trim();
+  const rating = document.getElementById('t_rating').value;
+  const review = document.getElementById('t_review').value.trim();
+  if (!name || !review) { showToast('Name and review are required.', true); return; }
+  if (BACKEND_AVAILABLE) {
+    try {
+      const res = await fetch('/testimonial', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({customer_name:name, rating, review})});
+      if (res.ok) { showToast('Testimonial added!'); document.getElementById('t_name').value=''; document.getElementById('t_review').value=''; loadTestiAdmin(); loadTestimonials(); return; }
+    } catch(e) {}
+  }
+  const newT = {id: Date.now(), customer_name: name, rating: parseInt(rating), review};
+  LOCAL_ADMIN.testimonials.push(newT); LOCAL_ADMIN.save();
+  showToast('Testimonial added!'); document.getElementById('t_name').value=''; document.getElementById('t_review').value='';
+  loadTestiAdmin(); loadTestimonials();
+}
+
+async function deleteTestimonial(id) {
+  if (!confirm('Delete this testimonial?')) return;
+  if (BACKEND_AVAILABLE) {
+    try {
+      const res = await fetch(`/testimonial/${id}`, {method:'DELETE', credentials:'include'});
+      if (res.ok) { showToast('Testimonial deleted.'); loadTestiAdmin(); loadTestimonials(); return; }
+    } catch(e) {}
+  }
+  LOCAL_ADMIN.testimonials = LOCAL_ADMIN.testimonials.filter(x => x.id !== id); LOCAL_ADMIN.save();
+  showToast('Testimonial deleted.'); loadTestiAdmin(); loadTestimonials();
+}
+
+// Check session on load (Python only)
+async function checkSession() {
+  if (!BACKEND_AVAILABLE) return;
+  try {
+    const res = await fetch('/auth/status', {credentials:'include'});
+    if (res.ok) { const d = await res.json(); if (d.logged_in) { isLoggedIn = true; currentUser = d.username; openAdmin(d.username || 'admin'); } }
+  } catch(e) {}
+}
+
+// INIT
+loadGallery();
+loadTestimonials();
+checkSession();
+</script>
+</body>
+</html>
