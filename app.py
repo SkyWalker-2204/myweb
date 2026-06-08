@@ -329,6 +329,6 @@ if __name__ == '__main__':
     print('\n✨ Sabiya\'s Mehndi Art Website running!')
     print('   Open: http://localhost:5000')
     print('   Admin Login: http://localhost:5000 → Click Admin')
-    print('   Username: sabiya | Password: sabiya123')
+    print('   Username: sabiya | Password: @sabiya#101')
     print('   Alternative: admin | admin123\n')
     app.run(debug=True, port=5000)
