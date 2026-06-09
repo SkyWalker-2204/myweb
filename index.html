@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <meta name="description" content="Sabiya's Mehndi Art – Premium Bridal, Arabic & Festival Mehndi Artist in Vita City. Book Now for Wedding, Engagement & Festival Mehndi Designs."/>
 <title>Sabiya's Mehndi Art – Premium Bridal Mehndi Artist | Vita City</title>
-<link rel="icon" type="image/png" href="static/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
@@ -43,15 +42,7 @@ input,textarea,select{font-family:inherit}
 ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
 
 /* NAVBAR */
-#navbar{
-  position:fixed;top:0;left:0;right:0;z-index:1000;
-  background:rgba(26,58,42,0.97);backdrop-filter:blur(10px);
-  padding:0 5%;
-  display:flex;align-items:center;justify-content:space-between;
-  height:68px;
-  border-bottom:1px solid rgba(201,168,76,0.3);
-  transition:var(--transition);
-}
+#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(26,58,42,0.97);backdrop-filter:blur(10px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;border-bottom:1px solid rgba(201,168,76,0.3);transition:var(--transition);}
 #navbar.scrolled{background:rgba(26,58,42,0.99);box-shadow:0 4px 20px rgba(0,0,0,0.3);}
 .nav-logo{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;display:flex;align-items:center;gap:10px;}
 .nav-logo span{color:var(--white);font-weight:300}
@@ -355,6 +346,47 @@ footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);pa
 .empty-state{text-align:center;padding:40px;color:var(--text-light);font-size:0.9rem;}
 .empty-state .es-icon{font-size:2.5rem;margin-bottom:10px;opacity:0.4}
 
+/* ══════════════════════════════════
+   FILE UPLOAD — NEW STYLES
+══════════════════════════════════ */
+.upload-tabs{display:flex;gap:0;margin-bottom:20px;border-radius:10px;overflow:hidden;border:1.5px solid rgba(74,140,92,0.25);width:fit-content;}
+.upload-tab{padding:9px 22px;font-size:0.82rem;font-weight:600;color:var(--text-mid);background:var(--cream);transition:var(--transition);cursor:pointer;border:none;font-family:inherit;letter-spacing:0.5px;}
+.upload-tab.active{background:linear-gradient(135deg,var(--green-mid),var(--green-light));color:var(--white);}
+.upload-tab:first-child{border-right:1.5px solid rgba(74,140,92,0.25);}
+.upload-panel{display:none}
+.upload-panel.active{display:block}
+
+/* Drag & Drop Zone */
+.drop-zone{border:2.5px dashed rgba(74,140,92,0.35);border-radius:14px;padding:36px 24px;text-align:center;background:rgba(232,245,236,0.4);transition:var(--transition);cursor:pointer;position:relative;}
+.drop-zone:hover,.drop-zone.dragover{border-color:var(--green-mid);background:rgba(232,245,236,0.8);}
+.drop-zone.has-file{border-color:var(--gold);background:rgba(253,246,227,0.5);}
+.drop-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.dz-icon{font-size:2.2rem;margin-bottom:10px;display:block;}
+.dz-title{font-size:0.95rem;font-weight:600;color:var(--green-deep);margin-bottom:5px;}
+.dz-sub{font-size:0.78rem;color:var(--text-light);}
+.dz-sub span{color:var(--green-mid);font-weight:600;text-decoration:underline;}
+
+/* Image Preview */
+.upload-preview{display:none;margin-top:16px;border-radius:12px;overflow:hidden;border:2px solid rgba(201,168,76,0.4);position:relative;background:var(--cream);}
+.upload-preview.show{display:flex;align-items:center;gap:14px;padding:10px 14px;}
+.upload-preview img{width:60px;height:60px;border-radius:8px;object-fit:cover;flex-shrink:0;}
+.preview-info{flex:1;min-width:0;}
+.preview-name{font-size:0.82rem;font-weight:600;color:var(--text-dark);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.preview-size{font-size:0.75rem;color:var(--text-light);}
+.preview-remove{width:28px;height:28px;border-radius:50%;background:#fce4ec;color:#c62828;font-size:0.9rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--transition);flex-shrink:0;border:none;font-family:inherit;}
+.preview-remove:hover{background:#c62828;color:#fff;}
+
+/* Upload Progress */
+.upload-progress-wrap{display:none;margin-top:14px;}
+.upload-progress-wrap.show{display:block}
+.upload-progress-bar{height:6px;border-radius:3px;background:rgba(74,140,92,0.15);overflow:hidden;margin-bottom:6px;}
+.upload-progress-fill{height:100%;background:linear-gradient(90deg,var(--green-mid),var(--green-light));border-radius:3px;width:0%;transition:width 0.3s ease;}
+.upload-progress-text{font-size:0.75rem;color:var(--text-mid);text-align:center;}
+
+/* Upload Success Banner */
+.upload-success-banner{display:none;margin-top:12px;padding:10px 14px;border-radius:10px;background:#e8f5e9;border:1px solid #c8e6c9;color:#2e7d32;font-size:0.82rem;font-weight:600;align-items:center;gap:8px;}
+.upload-success-banner.show{display:flex}
+
 /* TOAST */
 #toast{position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;flex-direction:column;gap:8px;align-items:flex-end;}
 .toast-msg{background:var(--green-deep);color:var(--white);padding:12px 20px;border-radius:12px;font-size:0.88rem;box-shadow:0 8px 24px rgba(0,0,0,0.2);border-left:4px solid var(--gold);animation:toastIn 0.3s ease;display:flex;align-items:center;gap:8px;}
@@ -398,15 +430,17 @@ footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);pa
   .admin-tabs::-webkit-scrollbar{display:none}
   .admin-tab{white-space:nowrap}
   .about-features{grid-template-columns:1fr}
+  .admin-form-grid{grid-template-columns:1fr}
+  .upload-tabs{width:100%}
+  .upload-tab{flex:1;text-align:center}
 }
 </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav id="navbar"> 
+<nav id="navbar">
   <div class="nav-logo"><span>✦</span> Sabiya's <span>Mehndi Art</span></div>
-
   <div class="nav-links">
     <a href="#hero" class="active">Home</a>
     <a href="#about">About</a>
@@ -470,7 +504,6 @@ footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);pa
 <section id="about">
   <div class="section-center">
     <div class="about-grid">
-      <!-- ✅ REAL MEHNDI PHOTOS IN ABOUT SECTION -->
       <div class="about-img-stack fade-in">
         <div class="about-experience-badge">
           <span class="yrs">6+</span>
@@ -558,8 +591,6 @@ footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);pa
       <p class="section-desc">Every package includes natural organic henna. Prices set by Sabiya – contact for exact quote.</p>
     </div>
     <div class="packages-grid">
-
-      <!-- ENGAGEMENT PACKAGE -->
       <div class="pkg-card fade-in">
         <div class="pkg-icon">💍</div>
         <div class="pkg-name">Engagement</div>
@@ -576,8 +607,6 @@ footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);pa
         </ul>
         <button class="pkg-book-btn" onclick="scrollToBooking('Engagement Package')">Book Now</button>
       </div>
-
-      <!-- BRIDAL PACKAGE -->
       <div class="pkg-card featured fade-in">
         <div class="pkg-featured-badge">✦ Most Popular</div>
         <div class="pkg-icon">👰</div>
@@ -596,8 +625,6 @@ footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);pa
         </ul>
         <button class="pkg-book-btn" onclick="scrollToBooking('Bridal Package')">Book Now</button>
       </div>
-
-      <!-- FAMILY PACKAGE -->
       <div class="pkg-card fade-in">
         <div class="pkg-icon">👨‍👩‍👧‍👦</div>
         <div class="pkg-name">Family Package</div>
@@ -614,8 +641,6 @@ footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);pa
         </ul>
         <button class="pkg-book-btn" onclick="scrollToBooking('Family Package')">Book Now</button>
       </div>
-
-      <!-- FESTIVAL PACKAGE -->
       <div class="pkg-card fade-in">
         <div class="pkg-icon">🎉</div>
         <div class="pkg-name">Festival Special</div>
@@ -632,8 +657,6 @@ footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);pa
         </ul>
         <button class="pkg-book-btn" onclick="scrollToBooking('Festival Package')">Book Now</button>
       </div>
-
-      <!-- CUSTOM PACKAGE -->
       <div class="pkg-card fade-in">
         <div class="pkg-icon">✨</div>
         <div class="pkg-name">Custom Package</div>
@@ -650,9 +673,7 @@ footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);pa
         </ul>
         <button class="pkg-book-btn" onclick="scrollToBooking('Custom Package')">Get Quote</button>
       </div>
-
     </div>
-    <!-- WhatsApp button for prices -->
     <div style="text-align:center;margin-top:36px;">
       <a href="https://wa.me/919763142964?text=Hi Sabiya! Package ki price janani hai." target="_blank" class="wa-btn" style="display:inline-flex;">
         💬 Price Puchne ke Liye WhatsApp Karo
@@ -823,7 +844,9 @@ footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);pa
   </div>
 </div>
 
-<!-- ADMIN PANEL -->
+<!-- ═══════════════════════════════════════
+     ADMIN PANEL
+═══════════════════════════════════════ -->
 <div id="admin">
   <div class="admin-header">
     <div class="admin-logo">✦ Sabiya's Mehndi Art <span>Admin Dashboard</span></div>
@@ -845,6 +868,8 @@ footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);pa
       <button class="admin-tab" onclick="showTab('tab-gallery',this)">🖼️ Gallery</button>
       <button class="admin-tab" onclick="showTab('tab-testimonials',this)">💬 Testimonials</button>
     </div>
+
+    <!-- BOOKINGS TAB -->
     <div class="tab-content active" id="tab-bookings">
       <div class="admin-toolbar">
         <input type="text" class="admin-search" id="bookingSearch" placeholder="🔍 Search by name, ID, mobile..." oninput="searchBookings()"/>
@@ -857,18 +882,89 @@ footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);pa
         </table>
       </div>
     </div>
+
+    <!-- ═══════════════════════════════════════
+         GALLERY TAB — FILE UPLOAD ADDED
+    ═══════════════════════════════════════ -->
     <div class="tab-content" id="tab-gallery">
       <div class="admin-form">
-        <h4>➕ Add Gallery Image</h4>
-        <div class="admin-form-grid">
-          <div><label class="admin-label">Image URL *</label><input type="url" class="admin-input" id="g_url" placeholder="https://..."/></div>
-          <div><label class="admin-label">Category *</label><select class="admin-input" id="g_cat"><option value="">Select Category</option><option>Bridal</option><option>Arabic</option><option>Engagement</option><option>Festival</option><option>Modern</option></select></div>
-          <div><label class="admin-label">Title</label><input type="text" class="admin-input" id="g_title" placeholder="Design title"/></div>
+        <h4>➕ Gallery Mein Photo Add Karo</h4>
+
+        <!-- Tab switcher: File Upload vs URL -->
+        <div class="upload-tabs" id="uploadTabs">
+          <button class="upload-tab active" onclick="switchUploadTab('file', this)">📁 File Upload (Phone/PC se)</button>
+          <button class="upload-tab" onclick="switchUploadTab('url', this)">🔗 URL se Add</button>
         </div>
-        <button class="admin-submit" style="margin-top:14px" onclick="addGalleryItem()">Add to Gallery</button>
+
+        <!-- ── FILE UPLOAD PANEL ── -->
+        <div class="upload-panel active" id="panel-file">
+          <!-- Drag & Drop Zone -->
+          <div class="drop-zone" id="dropZone">
+            <input type="file" id="g_file" accept="image/*" onchange="handleFileSelect(this)"/>
+            <span class="dz-icon">🖼️</span>
+            <div class="dz-title">Photo yahan drop karo ya click karke select karo</div>
+            <div class="dz-sub">JPG, PNG, WEBP — max 5MB &nbsp;|&nbsp; <span>Browse karo</span></div>
+          </div>
+
+          <!-- Preview -->
+          <div class="upload-preview" id="uploadPreview">
+            <img id="previewImg" src="" alt="preview"/>
+            <div class="preview-info">
+              <div class="preview-name" id="previewName">—</div>
+              <div class="preview-size" id="previewSize">—</div>
+            </div>
+            <button class="preview-remove" onclick="clearFileSelect()" title="Hatao">✕</button>
+          </div>
+
+          <!-- Progress bar -->
+          <div class="upload-progress-wrap" id="uploadProgressWrap">
+            <div class="upload-progress-bar"><div class="upload-progress-fill" id="uploadProgressFill"></div></div>
+            <div class="upload-progress-text" id="uploadProgressText">Uploading…</div>
+          </div>
+
+          <!-- Success banner -->
+          <div class="upload-success-banner" id="uploadSuccessBanner">
+            ✅ Photo successfully gallery mein add ho gayi!
+          </div>
+
+          <!-- Category & Title for file upload -->
+          <div class="admin-form-grid" style="margin-top:16px">
+            <div>
+              <label class="admin-label">Category *</label>
+              <select class="admin-input" id="g_file_cat">
+                <option value="">Select Category</option>
+                <option>Bridal</option>
+                <option>Arabic</option>
+                <option>Engagement</option>
+                <option>Festival</option>
+                <option>Modern</option>
+              </select>
+            </div>
+            <div>
+              <label class="admin-label">Title (optional)</label>
+              <input type="text" class="admin-input" id="g_file_title" placeholder="e.g. Bridal Full Hand Design"/>
+            </div>
+            <div style="display:flex;align-items:flex-end;">
+              <button class="admin-submit" style="width:100%" onclick="addGalleryFromFile()">➕ Gallery Mein Add Karo</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── URL PANEL ── -->
+        <div class="upload-panel" id="panel-url">
+          <div class="admin-form-grid">
+            <div><label class="admin-label">Image URL *</label><input type="url" class="admin-input" id="g_url" placeholder="https://..."/></div>
+            <div><label class="admin-label">Category *</label><select class="admin-input" id="g_cat"><option value="">Select Category</option><option>Bridal</option><option>Arabic</option><option>Engagement</option><option>Festival</option><option>Modern</option></select></div>
+            <div><label class="admin-label">Title</label><input type="text" class="admin-input" id="g_title" placeholder="Design title"/></div>
+          </div>
+          <button class="admin-submit" style="margin-top:14px" onclick="addGalleryItem()">Add to Gallery</button>
+        </div>
       </div>
+
       <div class="gallery-admin-grid" id="galleryAdminGrid"><div class="empty-state"><div class="es-icon">🖼️</div>Loading gallery...</div></div>
     </div>
+
+    <!-- TESTIMONIALS TAB -->
     <div class="tab-content" id="tab-testimonials">
       <div class="admin-form">
         <h4>➕ Add Testimonial</h4>
@@ -881,18 +977,18 @@ footer{background:var(--green-deep);border-top:1px solid rgba(201,168,76,0.3);pa
       </div>
       <div class="testi-admin-grid" id="testiAdminGrid"><div class="empty-state"><div class="es-icon">💬</div>Loading testimonials...</div></div>
     </div>
-  </div>
-</div>
+
+  </div><!-- /admin-body -->
+</div><!-- /admin -->
 
 <div id="toast"></div>
 
 <script>
 // ══════════════════════════════════════════
-// CONFIG — Python server chal raha hai toh true, nahi toh false
+// CONFIG
 // ══════════════════════════════════════════
 const BACKEND_AVAILABLE = window.location.protocol !== 'file:' && window.location.port !== '';
 
-// Local storage based admin system (works WITHOUT Python)
 const LOCAL_ADMIN = {
   users: { 'sabiya': 'sabiya123', 'admin': 'admin123' },
   bookings: JSON.parse(localStorage.getItem('mehndi_bookings') || '[]'),
@@ -923,7 +1019,11 @@ let currentUser = '';
 let allGalleryItems = [];
 let allBookings = [];
 let currentGalleryFilter = 'All';
+let selectedFileDataUrl = null;   // ← stores base64 of chosen image
 
+// ══════════════════════════════════════════
+// TOAST
+// ══════════════════════════════════════════
 function showToast(msg, isError = false) {
   const container = document.getElementById('toast');
   const el = document.createElement('div');
@@ -933,7 +1033,9 @@ function showToast(msg, isError = false) {
   setTimeout(() => { el.style.animation = 'toastOut 0.3s ease forwards'; setTimeout(() => el.remove(), 350); }, 3500);
 }
 
+// ══════════════════════════════════════════
 // NAVBAR
+// ══════════════════════════════════════════
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
   const sections = ['hero','about','why','gallery','packages','booking','testimonials','contact'];
@@ -952,14 +1054,11 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 document.getElementById('b_date').min = new Date().toISOString().split('T')[0];
 
 // ══════════════════════════════════════════
-// GALLERY
+// GALLERY (public)
 // ══════════════════════════════════════════
 async function loadGallery() {
   if (BACKEND_AVAILABLE) {
-    try {
-      const res = await fetch('/gallery');
-      if (res.ok) { allGalleryItems = await res.json(); renderGallery(currentGalleryFilter); return; }
-    } catch(e) {}
+    try { const res = await fetch('/gallery'); if (res.ok) { allGalleryItems = await res.json(); renderGallery(currentGalleryFilter); return; } } catch(e) {}
   }
   allGalleryItems = LOCAL_ADMIN.gallery;
   renderGallery(currentGalleryFilter);
@@ -997,9 +1096,7 @@ document.getElementById('galleryFilters').addEventListener('click', e => {
 // ══════════════════════════════════════════
 async function loadTestimonials() {
   let items = [];
-  if (BACKEND_AVAILABLE) {
-    try { const res = await fetch('/testimonials'); if (res.ok) { items = await res.json(); } } catch(e) {}
-  }
+  if (BACKEND_AVAILABLE) { try { const res = await fetch('/testimonials'); if (res.ok) { items = await res.json(); } } catch(e) {} }
   if (!items.length) items = LOCAL_ADMIN.testimonials;
   const grid = document.getElementById('testiGrid');
   if (!items.length) { grid.innerHTML = '<p class="empty-state">No testimonials yet.</p>'; return; }
@@ -1022,7 +1119,7 @@ function scrollToBooking(pkg) {
 }
 
 // ══════════════════════════════════════════
-// BOOKING FORM SUBMIT
+// BOOKING FORM
 // ══════════════════════════════════════════
 async function submitBooking() {
   const name = document.getElementById('b_name').value.trim();
@@ -1033,12 +1130,12 @@ async function submitBooking() {
   if (!mobile || mobile.replace(/\D/g,'').length < 7) { showToast('Please enter a valid mobile number.', true); return; }
   if (!event) { showToast('Please select an event type.', true); return; }
   if (!date) { showToast('Please select an event date.', true); return; }
-  
+
   const btn = document.querySelector('.submit-btn');
   btn.textContent = 'Sending...'; btn.disabled = true;
-  
+
   const payload = {
-    customer_name: name, mobile: mobile,
+    customer_name: name, mobile,
     email: document.getElementById('b_email').value.trim(),
     event_type: event, event_date: date,
     event_time: document.getElementById('b_time').value,
@@ -1049,32 +1146,22 @@ async function submitBooking() {
     notes: document.getElementById('b_notes').value.trim(),
   };
 
-  // Try Python backend first
   if (BACKEND_AVAILABLE) {
     try {
       const res = await fetch('/book', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
-      if (res.ok) {
-        const data = await res.json();
-        if (data.success) { showSuccess(data.booking_id); return; }
-      }
+      if (res.ok) { const data = await res.json(); if (data.success) { showSuccess(data.booking_id); return; } }
     } catch(e) {}
   }
 
-  // Fallback: Save locally
   const bid = 'MHD' + new Date().toISOString().slice(2,8).replace(/-/g,'') + Math.random().toString(36).slice(2,6).toUpperCase();
-  payload.booking_id = bid;
-  payload.booking_status = 'Pending';
-  payload.id = Date.now();
-  payload.created_at = new Date().toISOString();
-  LOCAL_ADMIN.bookings.push(payload);
-  LOCAL_ADMIN.save();
+  payload.booking_id = bid; payload.booking_status = 'Pending'; payload.id = Date.now(); payload.created_at = new Date().toISOString();
+  LOCAL_ADMIN.bookings.push(payload); LOCAL_ADMIN.save();
   showSuccess(bid);
 }
 
 function showSuccess(bid) {
   document.getElementById('bookingFormWrap').style.display = 'none';
-  const s = document.getElementById('formSuccess');
-  s.style.display = 'block';
+  document.getElementById('formSuccess').style.display = 'block';
   document.getElementById('successBid').textContent = '📋 ' + bid;
   showToast('Booking confirmed! ID: ' + bid);
 }
@@ -1088,7 +1175,7 @@ function sendContact() {
 }
 
 // ══════════════════════════════════════════
-// LOGIN — Works with Python AND without Python
+// LOGIN
 // ══════════════════════════════════════════
 function openLogin() { document.getElementById('loginModal').classList.add('open'); setTimeout(() => document.getElementById('loginUser').focus(), 100); }
 function closeLogin() { document.getElementById('loginModal').classList.remove('open'); }
@@ -1102,36 +1189,24 @@ async function doLogin() {
   const errEl = document.getElementById('loginError');
   errEl.style.display = 'none';
   if (!user || !pass) { errEl.textContent = 'Please enter username and password.'; errEl.style.display = 'block'; return; }
-
-  // Try Python backend first
   if (BACKEND_AVAILABLE) {
     try {
       const res = await fetch('/login', { method:'POST', headers:{'Content-Type':'application/json'}, credentials:'include', body:JSON.stringify({username:user, password:pass}) });
       const data = await res.json();
       if (data.success) { closeLogin(); isLoggedIn = true; currentUser = user; openAdmin(data.username); return; }
-      if (!res.ok) {
-        // Backend failed — try local
-      }
     } catch(e) {}
   }
-
-  // Local login (works without Python)
   if (LOCAL_ADMIN.users[user] === pass) {
-    closeLogin();
-    isLoggedIn = true;
-    currentUser = user;
-    openAdmin(user);
-    showToast('Logged in locally (Python server not running)');
+    closeLogin(); isLoggedIn = true; currentUser = user; openAdmin(user);
+    showToast('Logged in locally');
   } else {
-    errEl.textContent = 'Invalid username or password.';
-    errEl.style.display = 'block';
+    errEl.textContent = 'Invalid username or password.'; errEl.style.display = 'block';
   }
 }
 
 async function doLogout() {
   if (BACKEND_AVAILABLE) { try { await fetch('/logout', {method:'POST', credentials:'include'}); } catch(e) {} }
-  isLoggedIn = false;
-  currentUser = '';
+  isLoggedIn = false; currentUser = '';
   document.getElementById('admin').style.display = 'none';
   document.body.style.overflow = '';
   showToast('Logged out successfully.');
@@ -1141,10 +1216,7 @@ function openAdmin(username) {
   document.getElementById('admin').style.display = 'block';
   document.body.style.overflow = 'hidden';
   document.getElementById('adminUserLabel').textContent = '👤 ' + username;
-  loadStats();
-  loadBookings();
-  loadGalleryAdmin();
-  loadTestiAdmin();
+  loadStats(); loadBookings(); loadGalleryAdmin(); loadTestiAdmin();
 }
 
 function showTab(tabId, btn) {
@@ -1152,6 +1224,148 @@ function showTab(tabId, btn) {
   document.querySelectorAll('.admin-tab').forEach(b => b.classList.remove('active'));
   document.getElementById(tabId).classList.add('active');
   btn.classList.add('active');
+}
+
+// ══════════════════════════════════════════
+// FILE UPLOAD — CORE LOGIC
+// ══════════════════════════════════════════
+
+// Switch between File Upload and URL tabs
+function switchUploadTab(type, btn) {
+  document.querySelectorAll('.upload-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.upload-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-' + type).classList.add('active');
+}
+
+// Drag & Drop setup
+const dropZone = document.getElementById('dropZone');
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('dragover');
+  const files = e.dataTransfer.files;
+  if (files.length > 0) processFile(files[0]);
+});
+
+function handleFileSelect(input) {
+  if (input.files && input.files[0]) processFile(input.files[0]);
+}
+
+function processFile(file) {
+  // Validate
+  if (!file.type.startsWith('image/')) { showToast('Sirf image files allowed hain (JPG, PNG, WEBP)', true); return; }
+  if (file.size > 5 * 1024 * 1024) { showToast('File 5MB se choti honi chahiye!', true); return; }
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    selectedFileDataUrl = e.target.result;
+
+    // Show preview
+    const preview = document.getElementById('uploadPreview');
+    document.getElementById('previewImg').src = selectedFileDataUrl;
+    document.getElementById('previewName').textContent = file.name;
+    document.getElementById('previewSize').textContent = (file.size / 1024).toFixed(1) + ' KB';
+    preview.classList.add('show');
+
+    // Update drop zone visual
+    dropZone.classList.add('has-file');
+
+    // Hide success banner if previously shown
+    document.getElementById('uploadSuccessBanner').classList.remove('show');
+  };
+  reader.readAsDataURL(file);
+}
+
+function clearFileSelect() {
+  selectedFileDataUrl = null;
+  document.getElementById('g_file').value = '';
+  document.getElementById('uploadPreview').classList.remove('show');
+  dropZone.classList.remove('has-file');
+  document.getElementById('uploadSuccessBanner').classList.remove('show');
+  document.getElementById('uploadProgressWrap').classList.remove('show');
+}
+
+// Add gallery item FROM FILE (base64 stored locally OR sent to server)
+async function addGalleryFromFile() {
+  if (!selectedFileDataUrl) { showToast('Pehle ek photo select karo!', true); return; }
+  const cat = document.getElementById('g_file_cat').value;
+  if (!cat) { showToast('Category select karo!', true); return; }
+  const title = document.getElementById('g_file_title').value.trim();
+
+  // Show progress animation
+  const progressWrap = document.getElementById('uploadProgressWrap');
+  const progressFill = document.getElementById('uploadProgressFill');
+  const progressText = document.getElementById('uploadProgressText');
+  progressWrap.classList.add('show');
+  progressFill.style.width = '0%';
+  progressText.textContent = 'Uploading…';
+
+  // Animate progress bar
+  let prog = 0;
+  const progInterval = setInterval(() => {
+    prog = Math.min(prog + Math.random() * 15, 90);
+    progressFill.style.width = prog + '%';
+  }, 150);
+
+  // Try to upload to Python backend (expects multipart or base64 endpoint)
+  let finalUrl = selectedFileDataUrl; // default: use base64 as URL (works locally!)
+
+  if (BACKEND_AVAILABLE) {
+    try {
+      // Convert base64 to blob and send as multipart
+      const blob = dataURLToBlob(selectedFileDataUrl);
+      const formData = new FormData();
+      formData.append('image', blob, 'mehndi_' + Date.now() + '.' + blob.type.split('/')[1]);
+      formData.append('category', cat);
+      formData.append('title', title);
+      const res = await fetch('/gallery/upload', { method: 'POST', credentials: 'include', body: formData });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.image_url) finalUrl = data.image_url;
+      }
+    } catch(e) {
+      // Fallback to base64 — still works fine for local use
+    }
+  }
+
+  // Complete progress
+  clearInterval(progInterval);
+  progressFill.style.width = '100%';
+  progressText.textContent = 'Gallery mein add ho rahi hai…';
+
+  await new Promise(r => setTimeout(r, 400));
+
+  // Save item
+  const newItem = { id: Date.now(), image_url: finalUrl, category: cat, title };
+  LOCAL_ADMIN.gallery.push(newItem);
+  LOCAL_ADMIN.save();
+  allGalleryItems = LOCAL_ADMIN.gallery;
+
+  // Done!
+  progressWrap.classList.remove('show');
+  document.getElementById('uploadSuccessBanner').classList.add('show');
+  showToast('Photo gallery mein add ho gayi! ✦');
+
+  // Reset form fields (but keep success banner)
+  clearFileSelect();
+  document.getElementById('g_file_cat').value = '';
+  document.getElementById('g_file_title').value = '';
+
+  // Refresh grids
+  loadGalleryAdmin();
+  renderGallery(currentGalleryFilter);
+}
+
+// Helper: base64 dataURL → Blob
+function dataURLToBlob(dataURL) {
+  const [header, base64] = dataURL.split(',');
+  const mime = header.match(/:(.*?);/)[1];
+  const binary = atob(base64);
+  const arr = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) arr[i] = binary.charCodeAt(i);
+  return new Blob([arr], { type: mime });
 }
 
 // ══════════════════════════════════════════
@@ -1172,7 +1386,6 @@ async function loadStats() {
       }
     } catch(e) {}
   }
-  // Local stats
   const b = LOCAL_ADMIN.bookings;
   const today = new Date().toISOString().split('T')[0];
   document.getElementById('st-total').textContent = b.length;
@@ -1192,13 +1405,8 @@ async function loadBookings(query = '') {
       if (res.ok) { allBookings = await res.json(); renderBookings(allBookings); return; }
     } catch(e) {}
   }
-  // Local
   const q = query.toLowerCase();
-  allBookings = q ? LOCAL_ADMIN.bookings.filter(b => 
-    b.customer_name.toLowerCase().includes(q) || 
-    b.mobile.includes(q) || 
-    b.booking_id.toLowerCase().includes(q)
-  ) : [...LOCAL_ADMIN.bookings];
+  allBookings = q ? LOCAL_ADMIN.bookings.filter(b => b.customer_name.toLowerCase().includes(q) || b.mobile.includes(q) || b.booking_id.toLowerCase().includes(q)) : [...LOCAL_ADMIN.bookings];
   renderBookings(allBookings);
 }
 
@@ -1242,14 +1450,11 @@ async function deleteBooking(id) {
 }
 
 // ══════════════════════════════════════════
-// ADMIN — GALLERY
+// ADMIN — GALLERY (URL METHOD)
 // ══════════════════════════════════════════
 async function loadGalleryAdmin() {
   if (BACKEND_AVAILABLE) {
-    try {
-      const res = await fetch('/gallery');
-      if (res.ok) { renderGalleryAdmin(await res.json()); return; }
-    } catch(e) {}
+    try { const res = await fetch('/gallery'); if (res.ok) { renderGalleryAdmin(await res.json()); return; } } catch(e) {}
   }
   renderGalleryAdmin(LOCAL_ADMIN.gallery);
 }
@@ -1257,7 +1462,15 @@ async function loadGalleryAdmin() {
 function renderGalleryAdmin(items) {
   const grid = document.getElementById('galleryAdminGrid');
   if (!items.length) { grid.innerHTML = '<div class="empty-state"><div class="es-icon">🖼️</div>No gallery items.</div>'; return; }
-  grid.innerHTML = items.map(g => `<div class="gad-card"><img src="${g.image_url}" alt="${g.title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=300'"/><div class="gad-overlay"><div class="gad-cat">${g.category}</div><div class="gad-title">${g.title||'Untitled'}</div><button class="gad-del" onclick="deleteGalleryItem(${g.id})">🗑 Delete</button></div></div>`).join('');
+  grid.innerHTML = items.map(g => `
+    <div class="gad-card">
+      <img src="${g.image_url.startsWith('data:') ? g.image_url : g.image_url}" alt="${g.title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=300'"/>
+      <div class="gad-overlay">
+        <div class="gad-cat">${g.category}</div>
+        <div class="gad-title">${g.title||'Untitled'}</div>
+        <button class="gad-del" onclick="deleteGalleryItem(${g.id})">🗑 Delete</button>
+      </div>
+    </div>`).join('');
 }
 
 async function addGalleryItem() {
@@ -1271,7 +1484,6 @@ async function addGalleryItem() {
       if (res.ok) { showToast('Gallery item added!'); document.getElementById('g_url').value=''; document.getElementById('g_cat').value=''; document.getElementById('g_title').value=''; loadGalleryAdmin(); loadGallery(); return; }
     } catch(e) {}
   }
-  // Local
   const newItem = {id: Date.now(), image_url: url, category: cat, title};
   LOCAL_ADMIN.gallery.push(newItem); LOCAL_ADMIN.save();
   showToast('Gallery item added!');
@@ -1296,10 +1508,7 @@ async function deleteGalleryItem(id) {
 // ══════════════════════════════════════════
 async function loadTestiAdmin() {
   if (BACKEND_AVAILABLE) {
-    try {
-      const res = await fetch('/testimonials');
-      if (res.ok) { renderTestiAdmin(await res.json()); return; }
-    } catch(e) {}
+    try { const res = await fetch('/testimonials'); if (res.ok) { renderTestiAdmin(await res.json()); return; } } catch(e) {}
   }
   renderTestiAdmin(LOCAL_ADMIN.testimonials);
 }
@@ -1340,7 +1549,7 @@ async function deleteTestimonial(id) {
   showToast('Testimonial deleted.'); loadTestiAdmin(); loadTestimonials();
 }
 
-// Check session on load (Python only)
+// Check session on load
 async function checkSession() {
   if (!BACKEND_AVAILABLE) return;
   try {
